@@ -3,7 +3,12 @@
 
 format: jb-book
 root: index
-chapters:
-- file: lab_members
-- file: research
-- file: markdown-notebooks
+parts:
+  - caption: Research
+    chapters:
+    - file: lab_members
+    - file: publications
+  - caption: Teaching
+    chapters:
+    - file: Bayes_book
+    - file: msc_students
