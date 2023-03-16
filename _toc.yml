@@ -3,6 +3,8 @@
 
 format: jb-book
 root: index
+defaults: 
+  titlesonly: True
 parts:
   - caption: Research
     chapters:
