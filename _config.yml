@@ -63,7 +63,7 @@ use_binder_button                : true  # If 'true', add a binder button for in
 binderhub_url                    : https://mybinder.org  # The URL for your BinderHub. If no URL, use ""
 
 
-binder_repo_base                 : https://github.com/uncertainty-in-complex-systems 
+binder_repo_base                 : https://github.com/uncertainty-in-complex-systems
 binder_repo_org                  : maxhinne  #@@@ CHANGE THIS @@@ - 9# # Your GitHub username
 
 binder_repo_name                 : my-book-site  # The project repo name
