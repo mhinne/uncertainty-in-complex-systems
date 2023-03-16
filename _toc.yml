@@ -4,6 +4,6 @@
 format: jb-book
 root: index
 chapters:
-- file: markdown
-- file: notebooks
+- file: lab_members
+- file: research
 - file: markdown-notebooks
