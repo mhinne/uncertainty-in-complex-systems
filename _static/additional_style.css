@@ -5,3 +5,8 @@ p {
 .bd-sidebar {
 	overflow-y: hidden;
 }
+
+.mugshot {
+	border: 1px #000 solid;
+	margin: 1px;
+}
