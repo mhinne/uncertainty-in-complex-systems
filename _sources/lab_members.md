@@ -30,7 +30,7 @@ Vacancy coming up!
 
 ### David Leeftink
 
-### Olesya Moyieenko
+### Olesya Moiseenko
 
 ## MSc students
 
