@@ -2,7 +2,6 @@ p {
 	text-align: justify;
 }
 
-.nav {
-	overflow-y: auto;
+.bd-sidebar {
+	overflow-y: hidden;
 }
-	
