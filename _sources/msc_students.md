@@ -1,3 +1,3 @@
-# For potential master students
+# Looking for thesis projects?
 
 todo

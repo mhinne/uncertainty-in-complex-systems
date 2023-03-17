@@ -1,6 +1,6 @@
 # Lab members
 
-## Principle Investigator
+## Principal Investigator
 
 ### Max Hinne
 
