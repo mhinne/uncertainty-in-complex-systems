@@ -6,7 +6,7 @@
 
 ```{figure} ../images/max_head.jpg
 ---
-scale: 20%
+scale: 25%
 align: right
 figclass: mugshot
 ---
