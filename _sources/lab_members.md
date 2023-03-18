@@ -24,9 +24,9 @@ Vacancy coming up!
 
 ### Rick Dijkstra
 
-### Gelana Khazeeva
-
 ### Hester Huijsdens
+
+### Gelana Khazeeva
 
 ### David Leeftink
 
