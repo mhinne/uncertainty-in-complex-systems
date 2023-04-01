@@ -9,7 +9,11 @@ p {
 .mugshot {
 	border: 2px #000 solid;
 	padding: 1px;
-	width: 64px;
+	overflow: auto;
+}
+
+.mugshot img {
+	width: 192px;
 }
 
 .social {
