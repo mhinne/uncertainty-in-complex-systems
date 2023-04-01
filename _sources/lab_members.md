@@ -21,18 +21,18 @@ https://github.com/mhinne https://twitter.com/Max_Hinne https://scholar.google.c
 
 ## Postdocs
 
+Vacancy coming up for a position on probabilistic graphical models, stay tuned!
+
+## PhD students
+
+### Constantin Börker
+
 ```{figure} ../images/constantin.jpg
 ---
 align: right
 figclass: mugshot
 ---
 ```
-
-Vacancy coming up!
-
-## PhD students
-
-### Constantin Börker
 
 Jeremy Constantin Börker is a PhD candidate / teacher at the Donders Institute. His research finds itself at the intersection of probabilistic deep learning and optimal control (read reinforcement learning) with some Bayesianism sprinkled on top of it. 
 
