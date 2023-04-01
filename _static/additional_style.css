@@ -9,4 +9,11 @@ p {
 .mugshot {
 	border: 2px #000 solid;
 	padding: 1px;
+	width: 64px;
+}
+
+.social {
+	float: left;
+	width: 42;
+	height: 42;
 }
