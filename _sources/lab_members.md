@@ -124,7 +124,7 @@ figclass: mugshot
 ---
 ```
 
-Lorem ipsum
+Olesya is a PhD candidate at the Donders Center of Cognition. Her research focuses on cognitive and social mechanisms that make infants such good learners. The project employs Bayesian modelling to find out what guides infants' attention in a social setting.
 
 +++
 
