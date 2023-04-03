@@ -106,7 +106,7 @@ figclass: mugshot
 ---
 ```
 
-Lorem ipsum
+David is a PhD student at the Donders Centre for Cognition, co-advised by prof. Marcel van Gerven and dr. Max Hinne. His research focuses on developing probabilistic models that can efficiently and effectively solve real-world control problems in the face of uncertainty. As part of the Uncertainty in Complex systems lab, he is currently working on using Bayesian non-parametric models for reinforcement learning and model predictive control. When not doing research, he can be found playing guitar, cycling, or playing tennis.
 
 +++
 
