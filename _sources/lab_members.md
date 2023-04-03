@@ -4,7 +4,7 @@
 
 ### Max Hinne
 
-```{figure} ../images/max_head.jpg
+```{figure} ../images/max.jpg
 ---
 align: right
 figclass: mugshot
@@ -37,6 +37,15 @@ figclass: mugshot
 Jeremy Constantin Börker is a PhD candidate / teacher at the Donders Institute. His research finds itself at the intersection of probabilistic deep learning and optimal control (read reinforcement learning) with some Bayesianism sprinkled on top of it. 
 
 ### Rick Dijkstra
+
+```{figure} ../images/rick.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Rick is a PhD candidate at the Behavioural Science Institute. His research is part of the Hybrid Human AI Regulation (HHAIR) project, which aims to support the self-regulation of learning of primary school students working with adaptive learning technologies. Part of his research is in understanding what level of support children need based on data gathered by the adaptive learning technology, for which he employs Bayesian non-parametric clustering. Part of his research will be developing the tools that give the right support to the right student.
 
 ### Hester Huijsdens
 
