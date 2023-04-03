@@ -72,8 +72,7 @@ align: right
 figclass: mugshot
 ---
 ```
-
-Lorem ipsum
+Hester is a PhD candidate at the Donders Centre for Cognition. Her project aims to study dynamic brain connectivity, and how this might be linked to cognition. She uses Bayesian non-parametric models to estimate how brain connectivity changes over time (or as a function of another covariate).
 
 +++
 
