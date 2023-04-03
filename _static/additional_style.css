@@ -21,3 +21,6 @@ p {
 	width: 42;
 	height: 42;
 }
+.sd-card-header p {
+	font-weight: bold;
+}
