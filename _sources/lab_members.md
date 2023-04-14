@@ -16,7 +16,7 @@ figclass: mugshot
 Max Hinne is an assistant professor at the Donders Institute. His research focuses on understanding and predicting the behaviour of complex dynamic systems. Doing this in a nuanced, interpretable, and efficient way requires a probabilistic perspective, which plays a central role in his work. Max combines both the development of state-of-the-art analyses and their applications in domains such as network neuroscience and healthcare.
 
 +++
-* https://www.maxhinne.com
+* http://www.maxhinne.com
 * https://twitter.com/Max_Hinne 
 * https://scholar.google.com/citations?user=oEtR-fkAAAAJ&hl=nl
 ````
@@ -89,7 +89,7 @@ figclass: mugshot
 ---
 ```
 
-Lorem ipsum
+My research focuses on the application of ML and DL in human genetics. In particular, I aim to develop an AI-based learning algorithm, that integrates genetic and phenotypic information and is able to automatically diagnose patients with genetic diseases. This will reduce the amount of time spent on data interpretation, thereby also reducing turn-around times for genetic tests, and will improve diagnoses by reducing the risk of human error.
 
 +++
 
