@@ -134,9 +134,43 @@ Olesya is a PhD candidate at the Donders Center of Cognition. Her research focus
 
 ````{card} 
 
+Jasper Albers
+^^^
+```{figure} ../images/jasper.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Lorem ipsum
+
++++
+
+````
+
+````{card} 
+
 Yangchu Huang
 ^^^
 ```{figure} ../images/yangchu.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Lorem ipsum
+
++++
+
+````
+
+````{card} 
+
+Jari Immerzeel
+^^^
+```{figure} ../images/jari.jpg
 ---
 align: right
 figclass: mugshot
