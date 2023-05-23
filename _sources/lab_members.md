@@ -166,22 +166,6 @@ Lorem ipsum
 
 ````
 
-````{card} 
-
-Jari Immerzeel
-^^^
-```{figure} ../images/jari.jpg
----
-align: right
-figclass: mugshot
----
-```
-
-Lorem ipsum
-
-+++
-
-````
 
 ````{card} 
 
