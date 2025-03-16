@@ -1,26 +1,52 @@
-p {
-	text-align: justify;
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  max-width: 300px;
+  margin: 16px;
+  transition: transform 0.2s;
 }
 
-.bd-sidebar {
-	overflow-y: hidden;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.mugshot {
-	border: 2px #000 solid;
-	padding: 1px;
-	overflow: auto;
+.card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 16px;
 }
 
-.mugshot img {
-	width: 192px;
+.card-content {
+  text-align: center;
 }
 
-.social {
-	float: left;
-	width: 42;
-	height: 42;
+.card-content h3 {
+  margin: 0;
+  font-size: 1.25em;
+  color: #333333;
 }
-.sd-card-header p {
-	font-weight: bold;
+
+.card-content p {
+  color: #777777;
+  font-size: 0.9em;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 100%;
+  }
 }
