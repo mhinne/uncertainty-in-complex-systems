@@ -47,20 +47,37 @@
   width: 120px;
   height: 120px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 5%;
   border: 3px solid #ddd;
 }
 
 /* Footer styling */
 .sd-card-footer {
-  text-align: center;
-  margin-top: 10px;
+  text-align: left !important; /* Force left alignment */
+  width: 100%; /* Ensure full width for proper alignment */
+  padding-top: 10px;
 }
 
+/* Target the list inside the footer */
+.sd-card-footer ul {
+  padding-left: 0; /* Remove unnecessary padding */
+  list-style-type: none; /* Optional: Removes bullet points */
+}
+
+/* Ensure each list item is left-aligned */
+.sd-card-footer li {
+  text-align: left; /* Override any inherited justification */
+}
+
+/* Ensure the links are properly formatted */
 .sd-card-footer a {
   text-decoration: none;
   color: #0077cc;
   font-weight: bold;
+}
+
+.sd-card-footer a:hover {
+  color: #0055aa;
 }
 
 /* Responsive design */
