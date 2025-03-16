@@ -39,7 +39,7 @@
 
 /* Image styling for mugshots */
 .sd-card-body figure.mugshot {
-  margin: 0 auto 15px;
+  margin: 0 0 10px 10px;
   text-align: center;
 }
 
@@ -61,7 +61,6 @@
 /* Target the list inside the footer */
 .sd-card-footer ul {
   padding-left: 0; /* Remove unnecessary padding */
-  list-style-type: none; /* Optional: Removes bullet points */
 }
 
 /* Ensure each list item is left-aligned */
