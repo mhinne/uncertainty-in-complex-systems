@@ -12,5 +12,6 @@ parts:
     - file: publications
   - caption: Teaching
     chapters:
+    - file: courses
     - file: Bayes_book
     - file: msc_students
