@@ -7,7 +7,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px;
   max-width: 600px;
   width: 100%;
   margin: 20px auto;
@@ -32,7 +32,7 @@
 /* Body styling */
 .sd-card-body {
   text-align: justify;
-  font-size: 0.95em;
+  font-size: 0.9em;
   color: #555;
   width: 90%;
 }
@@ -48,7 +48,7 @@
   height: 120px;
   object-fit: cover;
   border-radius: 5%;
-  border: 3px solid #ddd;
+  border: 1px solid #e0e0e0;
 }
 
 /* Footer styling */
