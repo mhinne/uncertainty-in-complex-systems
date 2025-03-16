@@ -154,7 +154,7 @@ Olesya is a PhD candidate at the Donders Center of Cognition. Her research focus
 
 ````{card} 
 
-Zoé Sandle
+Zo&#233; Sandle
 ^^^
 ```{figure} _images/zoe.jpg
 ---

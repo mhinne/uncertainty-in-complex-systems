@@ -1,52 +1,61 @@
-.card {
+/* General card styling */
+.sd-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 16px;
-  max-width: 300px;
-  margin: 16px;
-  transition: transform 0.2s;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 350px;
+  margin: 20px auto;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.card:hover {
+/* Add hover effect */
+.sd-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 16px;
+/* Header styling */
+.sd-card-header {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.card-content {
+/* Body styling */
+.sd-card-body {
+  text-align: center;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* Image styling for mugshots */
+.sd-card-body figure.mugshot {
+  margin: 0 auto 15px;
   text-align: center;
 }
 
-.card-content h3 {
-  margin: 0;
-  font-size: 1.25em;
-  color: #333333;
+.sd-card-body figure.mugshot img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ddd;
 }
 
-.card-content p {
-  color: #777777;
-  font-size: 0.9em;
-}
-.cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Footer styling */
+.sd-card-footer {
+  text-align: center;
+  margin-top: 10px;
 }
 
-@media (max-width: 600px) {
-  .card {
-    max-width: 100%;
-  }
-}
+.sd-card-footer a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
