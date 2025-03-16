@@ -13,7 +13,7 @@ figclass: mugshot
 ---
 ```
 
-Max Hinne is an assistant professor at the Donders Institute. His research focuses on understanding and predicting the behaviour of complex dynamic systems. Doing this in a nuanced, interpretable, and efficient way requires a probabilistic perspective, which plays a central role in his work. Max combines both the development of state-of-the-art analyses and their applications in domains such as network neuroscience and healthcare.
+Max Hinne is an associate professor at the Donders Institute. His research focuses on understanding and predicting the behaviour of complex dynamic systems. Doing this in a nuanced, interpretable, and efficient way requires a probabilistic perspective, which plays a central role in his work. Max combines both the development of state-of-the-art analyses and their applications in domains such as network neuroscience and healthcare.
 
 +++
 * http://www.maxhinne.com
@@ -25,7 +25,30 @@ Max Hinne is an assistant professor at the Donders Institute. His research focus
 
 ## Postdocs
 
-Vacancy coming up for a position on probabilistic graphical models, stay tuned!
+````{card} 
+
+Josh Ring
+^^^
+```{figure} _images/josh.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+## Postdocs
+
+````{card} 
+
+Aline Viol
+^^^
+```{figure} _images/aline.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
 
 ## PhD students
 
