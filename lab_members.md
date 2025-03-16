@@ -6,7 +6,7 @@
 
 Max Hinne
 ^^^
-```{figure} ../images/max.jpg
+```{figure} images/max.jpg
 ---
 align: right
 figclass: mugshot
