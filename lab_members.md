@@ -6,7 +6,7 @@
 
 Max Hinne
 ^^^
-```{figure} images/max.jpg
+```{figure} _images/max.jpg
 ---
 align: right
 figclass: mugshot
@@ -33,7 +33,7 @@ Vacancy coming up for a position on probabilistic graphical models, stay tuned!
 
 Constantin Börker
 ^^^
-```{figure} images/constantin.jpg
+```{figure} _images/constantin.jpg
 ---
 align: right
 figclass: mugshot
@@ -49,7 +49,7 @@ Jeremy Constantin Börker is a PhD candidate / teacher at the Donders Institute.
 
 Rick Dijkstra
 ^^^
-```{figure} images/rick.jpg
+```{figure} _images/rick.jpg
 ---
 align: right
 figclass: mugshot
@@ -66,7 +66,7 @@ Rick is a PhD candidate at the Behavioural Science Institute. His research is pa
 
 Hester Huijsdens
 ^^^
-```{figure} images/hester.jpg
+```{figure} _images/hester.jpg
 ---
 align: right
 figclass: mugshot
@@ -82,7 +82,7 @@ Hester is a PhD candidate at the Donders Centre for Cognition. Her project aims 
 
 Gelana Khazeeva
 ^^^
-```{figure} images/gelana.jpg
+```{figure} _images/gelana.jpg
 ---
 align: right
 figclass: mugshot
@@ -99,7 +99,7 @@ My research focuses on the application of ML and DL in human genetics. In partic
 
 David Leeftink
 ^^^
-```{figure} images/david.jpg
+```{figure} _images/david.jpg
 ---
 align: right
 figclass: mugshot
@@ -116,7 +116,7 @@ David is a PhD student at the Donders Centre for Cognition, co-advised by prof. 
 
 Olesya Moiseenko
 ^^^
-```{figure} images/olesya.jpg
+```{figure} _images/olesya.jpg
 ---
 align: right
 figclass: mugshot
@@ -133,7 +133,7 @@ Olesya is a PhD candidate at the Donders Center of Cognition. Her research focus
 
 Zo� Sandle
 ^^^
-```{figure} images/zoe.jpg
+```{figure} _images/zoe.jpg
 ---
 align: right
 figclass: mugshot
@@ -147,60 +147,6 @@ Lorem ipsum.
 ````
 
 
-## MSc students
-
-````{card} 
-
-Jasper Albers
-^^^
-```{figure} ../images/jasper.jpg
----
-align: right
-figclass: mugshot
----
-```
-
-Lorem ipsum
-
-+++
-
-````
-
-````{card} 
-
-Yangchu Huang
-^^^
-```{figure} ../images/yangchu.jpg
----
-align: right
-figclass: mugshot
----
-```
-
-Lorem ipsum
-
-+++
-
-````
-
-
-````{card} 
-
-Pleun Scholten
-^^^
-```{figure} ../images/pleun.jpg
----
-align: right
-figclass: mugshot
----
-```
-
-Lorem ipsum
-
-+++
-
-````
-
 
 
 ## PhD alumni
@@ -210,7 +156,10 @@ Lorem ipsum
 
 ## MSc alumni
 
+* Jasper Albers
 * Arne Diehl
 * Zuzanna Fendor
+* Yangchu Huang
 * Callum Kartoredjo
 * David Leeftink
+* Pleun Scholten
