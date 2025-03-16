@@ -1,3 +1,26 @@
 p {
 	text-align: justify;
 }
+
+.bd-sidebar {
+	overflow-y: hidden;
+}
+
+.mugshot {
+	border: 2px #000 solid;
+	padding: 1px;
+	overflow: auto;
+}
+
+.mugshot img {
+	width: 192px;
+}
+
+.social {
+	float: left;
+	width: 42;
+	height: 42;
+}
+.sd-card-header p {
+	font-weight: bold;
+}

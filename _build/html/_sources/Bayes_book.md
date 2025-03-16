@@ -1,3 +1,3 @@
-# The book of Bayesian background
+# Bayesian essentials
 
-todo
+Lecture notes for Bayesian Statistics and advanced projects
