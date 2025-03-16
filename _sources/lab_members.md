@@ -36,7 +36,10 @@ figclass: mugshot
 ---
 ```
 
-## Postdocs
+Lorem ipsum.
+
++++
+````
 
 ````{card} 
 
@@ -48,6 +51,11 @@ align: right
 figclass: mugshot
 ---
 ```
+
+Lorem ipsum.
+
++++
+````
 
 
 ## PhD students

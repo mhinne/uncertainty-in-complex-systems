@@ -8,7 +8,8 @@
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 350px;
+  max-width: 600px;
+  width: 100%;
   margin: 20px auto;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -30,9 +31,10 @@
 
 /* Body styling */
 .sd-card-body {
-  text-align: center;
+  text-align: justify;
   font-size: 0.95em;
   color: #555;
+  width: 90%;
 }
 
 /* Image styling for mugshots */
@@ -59,3 +61,14 @@
   text-decoration: none;
   color: #0077cc;
   font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sd-card {
+    max-width: 90%; /* Ensure it scales well on smaller screens */
+  }
+  .sd-card-body {
+    width: 100%;
+  }
+}
