@@ -6,7 +6,7 @@
 
 Max Hinne
 ^^^
-```{figure} ../images/max.jpg
+```{figure} images/max.jpg
 ---
 align: right
 figclass: mugshot
@@ -33,7 +33,7 @@ Vacancy coming up for a position on probabilistic graphical models, stay tuned!
 
 Constantin Börker
 ^^^
-```{figure} ../images/constantin.jpg
+```{figure} images/constantin.jpg
 ---
 align: right
 figclass: mugshot
@@ -49,7 +49,7 @@ Jeremy Constantin Börker is a PhD candidate / teacher at the Donders Institute.
 
 Rick Dijkstra
 ^^^
-```{figure} ../images/rick.jpg
+```{figure} images/rick.jpg
 ---
 align: right
 figclass: mugshot
@@ -66,7 +66,7 @@ Rick is a PhD candidate at the Behavioural Science Institute. His research is pa
 
 Hester Huijsdens
 ^^^
-```{figure} ../images/hester.jpg
+```{figure} images/hester.jpg
 ---
 align: right
 figclass: mugshot
@@ -82,7 +82,7 @@ Hester is a PhD candidate at the Donders Centre for Cognition. Her project aims 
 
 Gelana Khazeeva
 ^^^
-```{figure} ../images/gelana.jpg
+```{figure} images/gelana.jpg
 ---
 align: right
 figclass: mugshot
@@ -99,7 +99,7 @@ My research focuses on the application of ML and DL in human genetics. In partic
 
 David Leeftink
 ^^^
-```{figure} ../images/david.jpg
+```{figure} images/david.jpg
 ---
 align: right
 figclass: mugshot
@@ -116,7 +116,7 @@ David is a PhD student at the Donders Centre for Cognition, co-advised by prof. 
 
 Olesya Moiseenko
 ^^^
-```{figure} ../images/olesya.jpg
+```{figure} images/olesya.jpg
 ---
 align: right
 figclass: mugshot
@@ -124,6 +124,23 @@ figclass: mugshot
 ```
 
 Olesya is a PhD candidate at the Donders Center of Cognition. Her research focuses on cognitive and social mechanisms that make infants such good learners. The project employs Bayesian modelling to find out what guides infants' attention in a social setting.
+
++++
+
+````
+
+````{card} 
+
+Zo� Sandle
+^^^
+```{figure} images/zoe.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Lorem ipsum.
 
 +++
 
