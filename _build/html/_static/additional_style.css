@@ -69,11 +69,11 @@ title {
 }
 
 .sd-card-body figure.mugshot img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 5%;
-  border: 1px solid #333;
+  border: 2px solid #333;
 }
 
 /* Footer styling */
