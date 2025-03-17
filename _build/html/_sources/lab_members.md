@@ -177,15 +177,17 @@ Lorem ipsum.
 
 ````
 
+## MSc students
 
+* Ella Has
+* Thomas Vissers
 
-
-## PhD alumni
+### PhD alumni
 
 * Fabian Dablander
 * Lex Dingemans
 
-## MSc alumni
+### MSc alumni
 
 * Jasper Albers
 * Arne Diehl
