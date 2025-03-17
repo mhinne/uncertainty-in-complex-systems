@@ -16,6 +16,10 @@ title {
   font-family: 'Gill Sans', sans-serif;
 }
 
+/* CSS for the navigation bar */
+nav {
+  overflow-y: auto; /* Display scrollbar only when content overflows */
+}
 
 /* General card styling */
 .sd-card {
