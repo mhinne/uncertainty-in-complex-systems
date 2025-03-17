@@ -18,7 +18,7 @@ title {
 
 /* CSS for the navigation bar */
 nav {
-  overflow-y: auto; /* Display scrollbar only when content overflows */
+  overflow-y: hidden; /* Display scrollbar only when content overflows */
 }
 
 /* General card styling */
