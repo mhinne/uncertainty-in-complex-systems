@@ -79,6 +79,14 @@
   color: #E3000B;
 }
 
+.pub a {
+  color: #8F2011;
+}
+.pub a:hover {
+  color: #E3000B;
+}
+
+
 /* Responsive design */
 @media (max-width: 768px) {
   .sd-card {
