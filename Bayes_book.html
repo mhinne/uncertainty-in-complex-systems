@@ -310,7 +310,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -326,6 +328,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -338,7 +348,37 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="bamojax">
 <h1>Bamojax<a class="headerlink" href="#bamojax" title="Link to this heading">#</a></h1>
 <p><a class="reference external" href="https://doi.org/10.5281/zenodo.15038847">Bamojax</a> is the Bayesian modelling in JAX toolkit developed by our group. It provides an interface between Bayesian computational modelling and fast inference using the <a class="reference external" href="https://blackjax-devs.github.io/blackjax/">Blackjax</a> software.</p>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h2>
+<p>Here is a simple example of how to use <strong>bamojax</strong> for the famous eight-schools dataset:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">means</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">28</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+<span class="n">stddevs</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">])</span>
+
+<span class="n">J</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">means</span><span class="p">)</span>
+
+<span class="n">ES</span> <span class="o">=</span> <span class="n">Model</span><span class="p">(</span><span class="s1">&#39;eight schools&#39;</span><span class="p">)</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">ES</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;mu&#39;</span><span class="p">,</span> <span class="n">distribution</span><span class="o">=</span><span class="n">dx</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="n">ES</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;tau&#39;</span><span class="p">,</span> <span class="n">distribution</span><span class="o">=</span><span class="n">dx</span><span class="o">.</span><span class="n">Transformed</span><span class="p">(</span><span class="n">dx</span><span class="o">.</span><span class="n">Normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">tfb</span><span class="o">.</span><span class="n">Exp</span><span class="p">()))</span>
+<span class="n">theta</span> <span class="o">=</span> <span class="n">ES</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;theta&#39;</span><span class="p">,</span> <span class="n">distribution</span><span class="o">=</span><span class="n">dx</span><span class="o">.</span><span class="n">Normal</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="n">mu</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">tau</span><span class="p">),</span> <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">J</span><span class="p">,</span> <span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">ES</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">distribution</span><span class="o">=</span><span class="n">dx</span><span class="o">.</span><span class="n">Normal</span><span class="p">,</span> <span class="n">parents</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="n">theta</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">stddevs</span><span class="p">),</span> <span class="n">observations</span><span class="o">=</span><span class="n">means</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We can then approximate the posterior, for example by using Blackjax’ <a class="reference external" href="https://osf.io/preprints/psyarxiv/swjtu_v2">Sequential Monte Carlo</a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up Rosenbluth-Metropolis-Hastings within SMC:</span>
+<span class="n">mcmc_params</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">sigma</span><span class="o">=</span><span class="mf">4.0</span><span class="o">*</span><span class="n">jnp</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">ES</span><span class="o">.</span><span class="n">get_model_size</span><span class="p">()))</span>
+<span class="n">rmh_kernel</span> <span class="o">=</span> <span class="n">mcmc_sampler</span><span class="p">(</span><span class="n">ES</span><span class="p">,</span> <span class="n">mcmc_kernel</span><span class="o">=</span><span class="n">blackjax</span><span class="o">.</span><span class="n">normal_random_walk</span><span class="p">,</span> <span class="n">mcmc_parameters</span><span class="o">=</span><span class="n">mcmc_params</span><span class="p">)</span>
+
+<span class="n">num_particles</span> <span class="o">=</span> <span class="mi">10_000</span>
+<span class="n">num_mutations</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">num_chains</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">engine</span> <span class="o">=</span> <span class="n">SMCInference</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">ES</span><span class="p">,</span> <span class="n">num_chains</span><span class="o">=</span><span class="n">num_chains</span><span class="p">,</span> <span class="n">mcmc_kernel</span><span class="o">=</span><span class="n">rmh_kernel</span><span class="p">,</span> <span class="n">num_particles</span><span class="o">=</span><span class="n">num_particles</span><span class="p">,</span> <span class="n">num_mutations</span><span class="o">=</span><span class="n">num_mutations</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">engine</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">jrnd</span><span class="o">.</span><span class="n">PRNGKey</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The full worked example <a class="reference external" href="https://github.com/UncertaintyInComplexSystems/bamojax/blob/main/bamojax/examples/toy_examples/eight_schools.ipynb">can be found here</a>!</p>
 <p>More tutorials on <strong>bamojax</strong> will follow here later. For now, feel free to browse the examples at <a class="github reference external" href="https://github.com/UncertaintyInComplexSystems/bamojax">UncertaintyInComplexSystems/bamojax</a>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -395,6 +435,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickstart">Quickstart</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
