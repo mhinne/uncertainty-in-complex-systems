@@ -1,3 +1,3 @@
 # Publications
 
-todo
+```{include} _static/scholar.html
