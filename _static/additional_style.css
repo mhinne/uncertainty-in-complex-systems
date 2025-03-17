@@ -71,12 +71,12 @@
 /* Ensure the links are properly formatted */
 .sd-card-footer a {
   text-decoration: none;
-  color: #0077cc;
-  font-weight: bold;
+  color: #8F2011;
+  font-weight: normal;
 }
 
 .sd-card-footer a:hover {
-  color: #0055aa;
+  color: #E3000B;
 }
 
 /* Responsive design */
