@@ -10,8 +10,8 @@ parts:
     chapters:
     - file: lab_members
     - file: publications
+    - file: Bayes_book
   - caption: Teaching
     chapters:
     - file: courses
-    - file: Bayes_book
     - file: msc_students
