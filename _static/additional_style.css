@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
 /* General website styling */
 
 body {
@@ -7,13 +9,14 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Gill Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   color: #2C3E50;
   margin-bottom: 1rem;
 }
 
 title {
-  font-family: 'Gill Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* CSS for the navigation bar */
