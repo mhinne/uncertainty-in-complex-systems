@@ -1,98 +1,117 @@
-/* General card styling */
-.sd-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 600px;
-  width: 100%;
-  margin: 20px auto;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+/* General website styling */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2C3E50;
+  background-color: #ECF0F1;
+  line-height: 1.6;
 }
 
-/* Add hover effect */
-.sd-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2C3E50;
+  margin-bottom: 1rem;
 }
 
-/* Header styling */
-.sd-card-header {
-  text-align: center;
-  font-size: 1.3em;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-/* Body styling */
-.sd-card-body {
-  text-align: justify;
-  font-size: 0.9em;
-  color: #555;
-  width: 100%;
-}
-
-/* Image styling for mugshots */
-.sd-card-body figure.mugshot {
-  margin: 0 0 10px 10px;
-  text-align: center;
-}
-
-.sd-card-body figure.mugshot img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 5%;
-  border: 1px solid #333;
-}
-
-/* Footer styling */
-.sd-card-footer {
-  text-align: left !important; /* Force left alignment */
-  width: 100%; /* Ensure full width for proper alignment */
-  padding-top: 10px;
-}
-
-/* Target the list inside the footer */
-.sd-card-footer ul {
-  padding-left: 0; /* Remove unnecessary padding */
-}
-
-/* Ensure each list item is left-aligned */
-.sd-card-footer li {
-  text-align: left; /* Override any inherited justification */
-}
-
-/* Ensure the links are properly formatted */
-.sd-card-footer a {
+/* Links */
+a {
+  color: #18BC9C;
   text-decoration: none;
-  color: #8F2011;
-  font-weight: normal;
 }
 
-.sd-card-footer a:hover {
-  color: #E3000B;
+a:hover {
+  color: #E74C3C;
+  text-decoration: underline;
 }
 
-.pub a {
-  color: #8F2011;
-}
-.pub a:hover {
-  color: #E3000B;
+/* Buttons */
+button, .btn {
+  background-color: #18BC9C;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease;
 }
 
+button:hover, .btn:hover {
+  background-color: #148F77;
+}
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .sd-card {
-    max-width: 90%; /* Ensure it scales well on smaller screens */
-  }
-  .sd-card-body {
+/* Containers */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+nav {
+  background-color: #2C3E50;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: #FFFFFF;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Cards */
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+/* Forms */
+input, textarea {
     width: 100%;
-  }
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #DCDCDC;
+    border-radius: 0.25rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #18BC9C;
+    outline: none;
+    box-shadow: 0 0 5px rgba(24, 188, 156, 0.5);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
 }
