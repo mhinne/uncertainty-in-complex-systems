@@ -17,7 +17,7 @@ Max Hinne is an associate professor at the Donders Institute. His research focus
 
 +++
 * http://www.maxhinne.com
-* https://twitter.com/Max_Hinne 
+* maxhinne.bsky.social 
 * https://scholar.google.com/citations?user=oEtR-fkAAAAJ&hl=nl
 ````
 
