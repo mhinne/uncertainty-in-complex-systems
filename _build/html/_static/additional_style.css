@@ -17,7 +17,7 @@ title {
 }
 
 /* CSS for the navigation bar */
-nav {
+.bd-sidebar {
   overflow-y: hidden; /* Display scrollbar only when content overflows */
 }
 
@@ -39,7 +39,6 @@ nav {
 
 /* Add hover effect */
 .sd-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
