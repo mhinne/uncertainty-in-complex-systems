@@ -40,7 +40,7 @@ result = engine.run(jrnd.PRNGKey(0))
 ```
 
 
-![png](bamojax_demo_files/bamojax_demo_7_0.png)
+![png](_static/bamojax_demo_files/bamojax_demo_7_0.png)
     
 
 
@@ -174,7 +174,7 @@ final_state = result['final_state']
 ```
 
     
-![png](bamojax_demo_files/bamojax_demo_17_0.png)
+![png](_static/bamojax_demo_files/bamojax_demo_17_0.png)
     
 
 
