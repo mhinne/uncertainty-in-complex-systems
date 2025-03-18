@@ -10,7 +10,7 @@ parts:
     chapters:
     - file: lab_members
     - file: publications
-    - file: Bayes_book
+    - file: bamojax_demo
   - caption: Teaching
     chapters:
     - file: courses
