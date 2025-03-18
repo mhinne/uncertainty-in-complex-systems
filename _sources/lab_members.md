@@ -190,7 +190,9 @@ Lorem ipsum.
 ### MSc alumni
 
 * Jasper Albers
+* David Cicchetti
 * Arne Diehl
+* Benedetta Felici
 * Zuzanna Fendor
 * Yangchu Huang
 * Callum Kartoredjo
