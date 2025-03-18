@@ -124,6 +124,6 @@ plt.show();
 
 
     
-![png](_static/bamojax_demo_files/bamojax_demo_7_0.png)
+![png](_static/Bayes_book_files/Bayes_book_7_0.png)
     
 
