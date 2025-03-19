@@ -10,7 +10,7 @@ Here is a simple example of how to use **bamojax** for the famous eight-schools 
 $$
 \begin{align*}
     \mu &\sim \mathcal{N}(0, 10) \\
-    \log \tau &\sim \mathcal{(5, 1)} \\
+    \log \tau &\sim \mathcal{N}(5, 1) \\
     \theta_i &\sim \mathcal{N}(\mu, \tau) \\
     y_i &\sim \mathcal{N}(\theta_i, \sigma_i)
 \end{align*}
