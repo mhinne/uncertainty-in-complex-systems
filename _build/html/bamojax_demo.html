@@ -343,12 +343,15 @@ document.write(`
 <section id="example-1-eight-schools">
 <h2>Example 1: Eight schools<a class="headerlink" href="#example-1-eight-schools" title="Permalink to this heading">#</a></h2>
 <p>Here is a simple example of how to use <strong>bamojax</strong> for the famous eight-schools dataset. We use the following hierarchical model:</p>
-<p>\begin{align*}
-\mu \sim \mathcal{N}(0, 10) \
-\log \tau \sim \mathcal{(5, 1)} \
-\theta_i \sim \mathcal{N}(\mu, \tau) \
-y_i &amp;\sim \mathcal{N}(\theta_i, \sigma_i)
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    \mu \sim \mathcal{N}(0, 10) \\
+    \log \tau \sim \mathcal{(5, 1)} \\
+    \theta_i \sim \mathcal{N}(\mu, \tau) \\
+    y_i &amp;\sim \mathcal{N}(\theta_i, \sigma_i)
+\end{align*}
+\end{split}\]</div>
 <p>Here’s how we set this up in <strong>bamojax</strong>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">means</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">28</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
 <span class="n">stddevs</span> <span class="o">=</span> <span class="n">jnp</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">18</span><span class="p">])</span>
@@ -382,14 +385,17 @@ y_i &amp;\sim \mathcal{N}(\theta_i, \sigma_i)
 <section id="example-2-generalized-wishart-processes">
 <h2>Example 2: Generalized Wishart processes<a class="headerlink" href="#example-2-generalized-wishart-processes" title="Permalink to this heading">#</a></h2>
 <p>A much more complicated model is the <a class="reference external" href="https://arxiv.org/abs/1101.0240">Generalized Wishart Process</a> (GWP). It is a Bayesian nonparametric model for estimating dynamic covariance between a set of variables. Here is the model:</p>
-<p>\begin{align*}
-\theta &amp;\sim \pi(\theta) &amp;&amp;\
-f_{ij} &amp;\sim \mathcal{GP}(0, \kappa_\theta) &amp;&amp; i=1, \ldots, \nu,\quad j=1, \ldots, D\
-L_m &amp; \sim \mathcal{N}(0, 1) &amp;&amp; m=1,\ldots, M\
-\mathbf{f}<em>i(x_n) &amp; = \left(f</em>{i1}(x_n), \ldots, f_{iD}(x_n)\right)^\top &amp;&amp; i=1, \ldots, \nu, \quad n=1, \ldots, N\
-\Sigma(x_n) &amp;= \sum_{i=1}^{\nu} \mathbf{L} \mathbf{f}_i(x_n) \mathbf{f}_i(x_n)^\top \mathbf{L}^\top \sim \mathcal{W}\left(\nu, \mathbf{LL}^\top\right) &amp;&amp; n=1, \ldots, N\
-\mathbf{y}_n &amp;\sim \mathcal{MVN}\left(\mathbf{\mu}, \Sigma(x_n)\right) &amp;&amp; n=1, \ldots, N \enspace,
-\end{align*}</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    \theta &amp;\sim \pi(\theta) &amp;&amp;\\
+    f_{ij} &amp;\sim \mathcal{GP}\left(0, \kappa_\theta\right) &amp;&amp; i=1, \ldots, \nu,\quad j=1, \ldots, D\\
+    L_m &amp; \sim \mathcal{N}(0, 1) &amp;&amp; m=1,\ldots, M\\
+    \mathbf{f}_i(x_n) &amp; = \left(f_{i1}(x_n), \ldots, f_{iD}(x_n)\right)^\top &amp;&amp; i=1, \ldots, \nu, \quad n=1, \ldots, N\\
+    \Sigma(x_n) &amp;= \sum_{i=1}^{\nu} \mathbf{L} \mathbf{f}_i(x_n) \mathbf{f}_i(x_n)^\top \mathbf{L}^\top \sim \mathcal{W}\left(\nu, \mathbf{LL}^\top\right) &amp;&amp; n=1, \ldots, N\\
+    \mathbf{y}_n &amp;\sim \mathcal{MVN}\left(\mathbf{\mu}, \Sigma(x_n)\right) &amp;&amp; n=1, \ldots, N \enspace,
+\end{align*} 
+\end{split}\]</div>
 <p>where <span class="math notranslate nohighlight">\(n=1, \ldots, N\)</span>, with <span class="math notranslate nohighlight">\(N\)</span> the total number of observations, <span class="math notranslate nohighlight">\(\nu \geq D\)</span> the degrees-of-freedom of the Wishart distribution, <span class="math notranslate nohighlight">\(M = D(D+1)/2\)</span>, and lastly <span class="math notranslate nohighlight">\(\kappa_\theta\)</span> the GP covariance function with parameters <span class="math notranslate nohighlight">\(\theta\)</span>.</p>
 <p>Below, we use <strong>bamojax</strong> to set up the GWP, but first we download some stock exchange data to demonstrate the model on:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Download timeseries&#39;</span><span class="p">)</span>

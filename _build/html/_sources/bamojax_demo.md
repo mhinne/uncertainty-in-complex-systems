@@ -7,12 +7,14 @@
 
 Here is a simple example of how to use **bamojax** for the famous eight-schools dataset. We use the following hierarchical model:
 
+$$
 \begin{align*}
     \mu \sim \mathcal{N}(0, 10) \\
     \log \tau \sim \mathcal{(5, 1)} \\
     \theta_i \sim \mathcal{N}(\mu, \tau) \\
     y_i &\sim \mathcal{N}(\theta_i, \sigma_i)
 \end{align*}
+$$
 
 Here's how we set this up in **bamojax**:
 
@@ -57,14 +59,16 @@ result = engine.run(jrnd.PRNGKey(0))
 
 A much more complicated model is the [Generalized Wishart Process](https://arxiv.org/abs/1101.0240) (GWP). It is a Bayesian nonparametric model for estimating dynamic covariance between a set of variables. Here is the model:
 
+$$
 \begin{align*}
     \theta &\sim \pi(\theta) &&\\
-    f_{ij} &\sim \mathcal{GP}(0, \kappa_\theta) && i=1, \ldots, \nu,\quad j=1, \ldots, D\\
+    f_{ij} &\sim \mathcal{GP}\left(0, \kappa_\theta\right) && i=1, \ldots, \nu,\quad j=1, \ldots, D\\
     L_m & \sim \mathcal{N}(0, 1) && m=1,\ldots, M\\
     \mathbf{f}_i(x_n) & = \left(f_{i1}(x_n), \ldots, f_{iD}(x_n)\right)^\top && i=1, \ldots, \nu, \quad n=1, \ldots, N\\
     \Sigma(x_n) &= \sum_{i=1}^{\nu} \mathbf{L} \mathbf{f}_i(x_n) \mathbf{f}_i(x_n)^\top \mathbf{L}^\top \sim \mathcal{W}\left(\nu, \mathbf{LL}^\top\right) && n=1, \ldots, N\\
     \mathbf{y}_n &\sim \mathcal{MVN}\left(\mathbf{\mu}, \Sigma(x_n)\right) && n=1, \ldots, N \enspace,
 \end{align*} 
+$$
 
 where $n=1, \ldots, N$, with $N$ the total number of observations, $\nu \geq D$ the degrees-of-freedom of the Wishart distribution, $M = D(D+1)/2$, and lastly $\kappa_\theta$ the GP covariance function with parameters $\theta$.
 
