@@ -10,9 +10,26 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
   color: #2C3E50;
   margin-bottom: 1rem;
+}
+h1 {
+  font-weight: 400;
+}
+h2 {
+  font-weight: 350;
+}
+h3 {
+  font-weight: 300;
+}
+h4 {
+  font-weight: 250;
+}
+h5 {
+  font-weight: 200;
+}
+h6 {
+  font-weight: 150;
 }
 
 .title {
