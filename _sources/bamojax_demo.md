@@ -32,7 +32,7 @@ theta = ES.add_node('theta', distribution=dx.Normal, parents=dict(loc=mu, scale=
 y = ES.add_node('y', distribution=dx.Normal, parents=dict(loc=theta, scale=stddevs), observations=means)
 ```
 
-After defining the model, we can approximate the posterior, for example by using Blackjax' [Sequential Monte Carlo](https://osf.io/preprints/psyarxiv/swjtu_v2) with Gibbs mutations:
+After defining the model, we can approximate the posterior, for example by using Blackjax' [Sequential Monte Carlo](https://link.springer.com/article/10.3758/s13428-025-02642-1?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=oa_20250326&utm_content=10.3758/s13428-025-02642-1) with Gibbs mutations:
 
 
 ```python
