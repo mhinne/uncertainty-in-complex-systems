@@ -1,3 +1,5 @@
+![bamojax logo](../_images/bamojax_logo.png)
+
 # Bamojax
 
 [Bamojax](https://doi.org/10.5281/zenodo.15038847) is the Bayesian modelling in JAX toolkit developed by our group. It provides an interface between Bayesian computational modelling and fast inference using the [Blackjax](https://blackjax-devs.github.io/blackjax/) software. In **bamojax**, you can specify your Bayesian model and chose an inference approach. If needed, **bamojax** automatically derives conditional densities to enable Gibbs sampling.
