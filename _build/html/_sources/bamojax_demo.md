@@ -1,4 +1,4 @@
-![bamojax logo](_images/bamojax_logo.png)
+![bamojax logo](uncertainty-in-complex-systems/_images/bamojax_logo.png)
 
 # Bamojax
 
