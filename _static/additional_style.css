@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+/* General website styling */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #2C3E50;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2C3E50;
+  margin-bottom: 1rem;
+}
+h1 {
+  font-weight: 400;
+}
+h2 {
+  font-weight: 350;
+}
+h3 {
+  font-weight: 300;
+}
+h4 {
+  font-weight: 250;
+}
+h5 {
+  font-weight: 200;
+}
+h6 {
+  font-weight: 150;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* CSS for the navigation bar */
+.bd-sidebar {
+  overflow-y: hidden; /* Display scrollbar only when content overflows */
+}
+
+/* General card styling */
+.sd-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Add hover effect */
+.sd-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+.sd-card-header {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Body styling */
+.sd-card-body {
+  text-align: justify;
+  font-size: 0.9em;
+  color: #555;
+  width: 100%;
+}
+
+/* Image styling for mugshots */
+.sd-card-body figure.mugshot {
+  margin: 0 0 10px 10px;
+  text-align: center;
+}
+
+.sd-card-body figure.mugshot img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #333;
+}
+
+/* Footer styling */
+.sd-card-footer {
+  text-align: left !important; /* Force left alignment */
+  width: 100%; /* Ensure full width for proper alignment */
+  padding-top: 10px;
+}
+
+/* Target the list inside the footer */
+.sd-card-footer ul {
+  padding-left: 0; /* Remove unnecessary padding */
+}
+
+/* Ensure each list item is left-aligned */
+.sd-card-footer li {
+  text-align: left; /* Override any inherited justification */
+}
+
+/* Ensure the links are properly formatted */
+.sd-card-footer a {
+  text-decoration: none;
+  color: #8F2011;
+  font-weight: normal;
+}
+
+.sd-card-footer a:hover {
+  color: #E3000B;
+}
+
+.pub a {
+  color: #8F2011;
+}
+.pub a:hover {
+  color: #E3000B;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sd-card {
+    max-width: 90%; /* Ensure it scales well on smaller screens */
+  }
+  .sd-card-body {
+    width: 100%;
+  }
+}
