@@ -6,7 +6,7 @@
 
 Max Hinne
 ^^^
-```{figure} _images/max.jpg
+```{figure} ../images/max.jpg
 ---
 align: right
 figclass: mugshot
@@ -29,7 +29,7 @@ Max Hinne is an associate professor at the Donders Institute. His research focus
 
 Josh Ring
 ^^^
-```{figure} _images/josh.jpg
+```{figure} _static/images/josh.jpg
 ---
 align: right
 figclass: mugshot
@@ -45,7 +45,7 @@ Lorem ipsum.
 
 Aline Viol
 ^^^
-```{figure} _images/aline.jpg
+```{figure} _static/images/aline.jpg
 ---
 align: right
 figclass: mugshot
@@ -64,7 +64,7 @@ Lorem ipsum.
 
 Constantin Börker
 ^^^
-```{figure} _images/constantin.jpg
+```{figure} _static/images/constantin.jpg
 ---
 align: right
 figclass: mugshot
@@ -80,7 +80,7 @@ Jeremy Constantin Börker is a PhD candidate / teacher at the Donders Institute.
 
 Rick Dijkstra
 ^^^
-```{figure} _images/rick.jpg
+```{figure} _static/images/rick.jpg
 ---
 align: right
 figclass: mugshot
@@ -97,7 +97,7 @@ Rick is a PhD candidate at the Behavioural Science Institute. His research is pa
 
 Hester Huijsdens
 ^^^
-```{figure} _images/hester.jpg
+```{figure} _static/images/hester.jpg
 ---
 align: right
 figclass: mugshot
@@ -113,7 +113,7 @@ Hester is a PhD candidate at the Donders Centre for Cognition. Her project aims 
 
 Gelana Khazeeva
 ^^^
-```{figure} _images/gelana.jpg
+```{figure} _static/images/gelana.jpg
 ---
 align: right
 figclass: mugshot
@@ -130,7 +130,7 @@ My research focuses on the application of ML and DL in human genetics. In partic
 
 David Leeftink
 ^^^
-```{figure} _images/david.jpg
+```{figure} _static/images/david.jpg
 ---
 align: right
 figclass: mugshot
@@ -147,7 +147,7 @@ David is a PhD student at the Donders Centre for Cognition, co-advised by prof. 
 
 Olesya Moiseenko
 ^^^
-```{figure} _images/olesya.jpg
+```{figure} _static/images/olesya.jpg
 ---
 align: right
 figclass: mugshot
@@ -164,7 +164,7 @@ Olesya is a PhD candidate at the Donders Center of Cognition. Her research focus
 
 Zo&#233; Sandle
 ^^^
-```{figure} _images/zoe.jpg
+```{figure} _static/images/zoe.jpg
 ---
 align: right
 figclass: mugshot
