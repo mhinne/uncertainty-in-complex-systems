@@ -1,4 +1,4 @@
-![bamojax logo](_images/bamojax_logo.png)
+![bamojax logo](_static/images/bamojax_logo_2x.png)
 
 # Bamojax
 
