@@ -15,19 +15,19 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
@@ -39,9 +39,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -85,28 +85,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -128,12 +123,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -149,6 +152,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="index.html">
@@ -196,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -205,7 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -290,10 +295,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -301,7 +306,7 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
@@ -329,7 +334,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="publications">
 <h1>Publications<a class="headerlink" href="#publications" title="Permalink to this heading">#</a></h1>
@@ -337,28 +342,35 @@ document.write(`
 <h2>2025</h2>
 <ul>
 <li class="pub">
-<a href="" target="_blank"><strong>Dynamic functional brain connectivity results depend on modeling assumptions: comparing frequentist and Bayesian hypothesis tests</strong></a><br />
-<em>Hester Huijsdens, Linda Geerligs, Max Hinne</em><br />
-<small>arXiv preprint, 2025</small></li>
+    <a href="" target="_blank"><strong>Dynamic functional brain connectivity results depend on modeling assumptions: comparing frequentist and Bayesian hypothesis tests</strong></a><br />
+    <em>Hester Huijsdens, Linda Geerligs, Max Hinne</em><br />
+    <small>arXiv preprint, 2025</small>
+</li>
 <li class="pub">
-<a href="https://arxiv.org/abs/2511.23141" target="_blank"><strong>Automated Discovery of Laser Dicing Processes with Bayesian Optimization for Semiconductor Manufacturing</strong></a><br />
-<em>David Leeftink, Roman Doll, Heleen Visserman, Marco Post, Faysal Boughorbel, Max Hinne, Marcel van Gerven</em><br />
-<small>arXiv preprint, 2025</small></li>
+    <a href="https://arxiv.org/abs/2511.23141" target="_blank"><strong>Automated Discovery of Laser Dicing Processes with Bayesian Optimization for Semiconductor Manufacturing</strong></a><br />
+    <em>David Leeftink, Roman Doll, Heleen Visserman, Marco Post, Faysal Boughorbel, Max Hinne, Marcel van Gerven</em><br />
+    <small>arXiv preprint, 2025</small>
+</li>
 <li class="pub">
-<a href="https://joss.theoj.org/papers/10.21105/joss.08642" target="_blank"><strong>Bamojax: Bayesian modelling with JAX</strong></a><br />
-<em>Max Hinne</em><br />
-<small>Journal of Open Source Software (JOSS), 2025</small></li>
-<a href="https://arxiv.org/abs/2504.02543" target="_blank"><strong>Predicting self-regulated learing support needs during learing</strong></a><br />
-<em>David Leeftink, Çağatay Yıldız, Steffen Ridderbusch, Max Hinne, Marcel van Gerven</em><br />
-<small>Conference on Decision and Control, 2025</small></li>
+    <a href="https://joss.theoj.org/papers/10.21105/joss.08642" target="_blank"><strong>Bamojax: Bayesian modelling with JAX</strong></a><br />
+    <em>Max Hinne</em><br />
+    <small>Journal of Open Source Software (JOSS), 2025</small>
+</li>
 <li class="pub">
-<a href="https://link.springer.com/chapter/10.1007/978-3-031-98462-4_40" target="_blank"><strong>Predicting self-regulated learing support needs during learing</strong></a><br />
-<em>Rick Dijkstra, Max Hinne, Eliane Segers, Josh Ring, Inge Molenaar</em><br />
-<small>International Conference on Artificial Intelligence in Education, 317-324, 2025</small></li>
+    <a href="https://arxiv.org/abs/2504.02543" target="_blank"><strong>Optimal Control of Probabilistic Dynamics Models via Mean Hamiltonian Minimization</strong></a><br />
+    <em>David Leeftink, Çağatay Yıldız, Steffen Ridderbusch, Max Hinne, Marcel van Gerven</em><br />
+    <small>Conference on Decision and Control, 2025</small>
+</li>
 <li class="pub">
-<a href="https://scholar.google.com/scholar_lookup?title=An+introduction+to+Sequential+Monte+Carlo+for+Bayesian+inference+and+model+comparison—with+examples+for+psychology+and+behavioral+science" target="_blank"><strong>An introduction to Sequential Monte Carlo for Bayesian inference and model comparison—with examples for psychology and behavioral science</strong></a><br />
-<em>Max Hinne</em><br />
-<small>Behavior Research Methods 57 (5), 125, 2025</small></li>
+    <a href="https://link.springer.com/chapter/10.1007/978-3-031-98462-4_40" target="_blank"><strong>Predicting self-regulated learing support needs during learing</strong></a><br />
+    <em>Rick Dijkstra, Max Hinne, Eliane Segers, Josh Ring, Inge Molenaar</em><br />
+    <small>International Conference on Artificial Intelligence in Education, 317-324, 2025</small>
+</li>
+<li class="pub">
+    <a href="https://scholar.google.com/scholar_lookup?title=An+introduction+to+Sequential+Monte+Carlo+for+Bayesian+inference+and+model+comparison—with+examples+for+psychology+and+behavioral+science" target="_blank"><strong>An introduction to Sequential Monte Carlo for Bayesian inference and model comparison—with examples for psychology and behavioral science</strong></a><br />
+    <em>Max Hinne</em><br />
+    <small>Behavior Research Methods 57 (5), 125, 2025</small>
+</li>
 </ul>
 <h2>2024</h2>
 <ul>
@@ -507,7 +519,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -578,8 +590,8 @@ By Max Hinne
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
