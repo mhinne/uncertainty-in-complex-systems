@@ -169,7 +169,7 @@ The next step is to define the Bayesian model:
 
 ```python
 GWP = Model('Generalized Wishart process')
-lengthscale = GWP.add_node(name='lengthscale', distribution=dx.Transformed(dx.Normal(loc=3.0, scale=0.5), tfb.Exp()))
+lengthscale = GWP.add_node(name='lengthscale', distribution=dx.Transformed(dx.Normal(loc=0.0, scale=1.0), tfb.Exp()))
 x_node = GWP.add_node(name='input', observations=time_in_days)
 F = GWP.add_node(name='F', distribution=GaussianProcessFactory(mean_fn=Zero(), cov_fn=jk.RBF()), 
                        parents=dict(input=x_node, 
@@ -193,16 +193,16 @@ step_fn_params = dict(lengthscale=dict(sigma=3.0),
 gibbs_kernel = gibbs_sampler(GWP, step_fns=step_fns, step_fn_params=step_fn_params)
 
 num_particles = 1_000
-num_mutations = 400
+num_mutations = 500
 
 engine = SMCInference(model=GWP, mcmc_kernel=gibbs_kernel, num_particles=num_particles, num_mutations=num_mutations, return_diagnostics=False)
-result = engine.run(jrnd.PRNGKey(1337))
+result = engine.run(jrnd.PRNGKey(0))
 
 final_state = result['final_state']
 ```
 
     
-![png](_static/bamojax_demo_files/bamojax_demo_17_0.png)
+![png](_static/bamojax_demo_files/bamojax_demo_gwp.png)
     
 
 
