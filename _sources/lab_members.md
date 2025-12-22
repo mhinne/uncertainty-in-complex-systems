@@ -60,6 +60,7 @@ https://alineviol.net/
 
 ## PhD students
 
+````{card} 
 Rick Dijkstra
 ^^^
 ```{figure} _static/images/rick.jpg
