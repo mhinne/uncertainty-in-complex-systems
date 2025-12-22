@@ -29,7 +29,7 @@ Max Hinne is an associate professor at the Donders Institute. His research focus
 
 Josh Ring
 ^^^
-```{figure} _static/images/josh.jpg
+```{figure} _static/images/placeholder.jpg
 ---
 align: right
 figclass: mugshot
@@ -45,38 +45,20 @@ Lorem ipsum.
 
 Aline Viol
 ^^^
-```{figure} _static/images/aline.jpg
+```{figure} _static/images/placeholder.jpg
 ---
 align: right
 figclass: mugshot
 ---
 ```
 
-Lorem ipsum.
+https://alineviol.net/
 
 +++
 ````
 
 
 ## PhD students
-
-````{card} 
-
-Constantin Börker
-^^^
-```{figure} _static/images/constantin.jpg
----
-align: right
-figclass: mugshot
----
-```
-
-Jeremy Constantin Börker is a PhD candidate / teacher at the Donders Institute. His research finds itself at the intersection of probabilistic deep learning and optimal control (read reinforcement learning) with some Bayesianism sprinkled on top of it. 
-
-+++
-````
-
-````{card} 
 
 Rick Dijkstra
 ^^^
@@ -179,8 +161,7 @@ I am interested in the (neuro)cognitive and neural underpinnings of antisocial b
 
 ## MSc students
 
-* Ella Has
-* Thomas Vissers
+* Janna van Assen
 
 ### PhD alumni
 
@@ -189,6 +170,8 @@ I am interested in the (neuro)cognitive and neural underpinnings of antisocial b
 
 ### MSc alumni
 
+* Ella Has
+* Thomas Vissers
 * Jasper Albers
 * David Cicchetti
 * Arne Diehl
