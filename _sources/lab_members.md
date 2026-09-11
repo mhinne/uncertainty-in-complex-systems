@@ -166,7 +166,7 @@ I am interested in the (neuro)cognitive and neural underpinnings of antisocial b
 
 Yves van Haaren
 ^^^
-```{figure} _static/images/yves.jpg
+```{figure} images/yves.jpg
 ---
 align: right
 figclass: mugshot
@@ -186,15 +186,17 @@ Yves is an MSc student supervised by Max Hinne. He has a particular interest in 
 
 ### MSc alumni
 
-* Ella Has
-* Thomas Vissers
+* Janna van Assen, thesis title: "Bayesian Model Comparison using Reversible Jump Sequential Monte Carlo"
+* Ella Has, thesis title: "Sparse Factored Wishart Process for Scalable and Interpretable Time-Varying Functional Connectivity Estimation"
+* Thomas Vissers, thesis title: "Wishart processes for estimating dynamic functional connectivity changes associated with temporal lobe epilepsy"
 * Jasper Albers
-* David Cicchetti
+* David Cicchetti, thesis title: "Detecting Change Points in Time Series with Gaussian Processes"
 * Arne Diehl
-* Benedetta Felici
+* Benedetta Felici, thesis title: "State-spaceWishart Processes forMultivariate Count Data Time Series Analysis"
 * Zuzanna Fendor
 * Yangchu Huang
+* Pleun Scholten
 * Callum Kartoredjo
 * David Leeftink
-* Pleun Scholten
-* Janna van Assen
+
+
