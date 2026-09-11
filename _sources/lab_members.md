@@ -162,7 +162,22 @@ I am interested in the (neuro)cognitive and neural underpinnings of antisocial b
 
 ## MSc students
 
-* Janna van Assen
+````{card} 
+
+Yves van Haaren
+^^^
+```{figure} _static/images/yves.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Yves is an MSc student supervised by Max Hinne. He has a particular interest in the theory of learning and algorithms with provable behavior. His research focuses on Bayesian methods for efficient model selection. Outside of academia, he likes to go running and do calisthenics.
+
++++
+
+````
 
 ### PhD alumni
 
@@ -182,3 +197,4 @@ I am interested in the (neuro)cognitive and neural underpinnings of antisocial b
 * Callum Kartoredjo
 * David Leeftink
 * Pleun Scholten
+* Janna van Assen
