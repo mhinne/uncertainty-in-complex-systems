@@ -181,22 +181,21 @@ Yves is an MSc student supervised by Max Hinne. He has a particular interest in 
 
 ### PhD alumni
 
-* Fabian Dablander
-* Lex Dingemans
+* Fabian Dablander, thesis title: "Changing Systems: Statistical, Causal, and Dynamical Perspectives."
+* Lex Dingemans, thesis title: "Next-generation phenotyping in neurodevelopmental disorders: Applications of artificial intelligence in clinical genetics"
 
 ### MSc alumni
 
 * Janna van Assen, thesis title: "Bayesian Model Comparison using Reversible Jump Sequential Monte Carlo"
 * Ella Has, thesis title: "Sparse Factored Wishart Process for Scalable and Interpretable Time-Varying Functional Connectivity Estimation"
 * Thomas Vissers, thesis title: "Wishart processes for estimating dynamic functional connectivity changes associated with temporal lobe epilepsy"
-* Jasper Albers
+* Benedetta Felici, thesis title: "State-space Wishart Processes for Multivariate Count Data Time Series Analysis"
 * David Cicchetti, thesis title: "Detecting Change Points in Time Series with Gaussian Processes"
-* Arne Diehl
-* Benedetta Felici, thesis title: "State-spaceWishart Processes forMultivariate Count Data Time Series Analysis"
-* Zuzanna Fendor
-* Yangchu Huang
-* Pleun Scholten
-* Callum Kartoredjo
-* David Leeftink
-
+* Jasper Albers, thesis title: "Bi-directional Interrupted Time series analysis"
+* Arne Diehl, thesis title: "On the Applicability of Nonparametric Graphon Models to Structural Connectivity"
+* Zuzanna Fendor, thesis title: "Predicting Depression with Bayesian Nonparametric Models"
+* Yangchu Huang, thesis title: "Identifying shared structures between structural and functional brain networks using a hyperbolic latent space model for multilayer networks"
+* Pleun Scholten, thesis title: "Should we Continue to Binarize? The Effects of Binarizing Functional Connectivity Networks on the Task-Specific Information in Latent Space Models of Varying Geometries"
+* David Leeftink, thesis title: "Continuous-time Model Predictive Control with Gaussian Processes: Learning-based Model Predictive Control with Gaussian Processes ODEs"
+* Callum Kartoredjo, thesis title: "The Importance of Inter-Individual Differences in Cognitive Decline in Modelling Brain Connectomics with Spatio-Temporal Gaussian Processes"
 
