@@ -117,7 +117,46 @@ a:focus {
   text-decoration-color: #681f1b;
 }
 
+/* ---------- Left sidebar link colors ---------- */
 
+.bd-sidebar-primary a,
+.bd-sidebar-primary a:visited,
+.bd-sidebar-primary .nav-link,
+.bd-sidebar-primary .nav-link:visited,
+.bd-links a,
+.bd-links a:visited {
+  color: #4e5559 !important;
+  text-decoration: none;
+}
+
+.bd-sidebar-primary a:hover,
+.bd-sidebar-primary a:focus,
+.bd-sidebar-primary .nav-link:hover,
+.bd-sidebar-primary .nav-link:focus,
+.bd-links a:hover,
+.bd-links a:focus {
+  color: #8b2f2a !important;
+  background: #f4ebe9;
+  text-decoration: none;
+}
+
+.bd-links .active > .nav-link,
+.bd-links .active > .nav-link:visited,
+.bd-links .nav-link.active,
+.bd-links .nav-link.active:visited {
+  color: #8b2f2a !important;
+  font-weight: 600;
+  background: #f4ebe9;
+}
+
+.bd-links .caption {
+  color: #7b7f82;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+}
 
 
 /* ---------- Left navigation ---------- */
