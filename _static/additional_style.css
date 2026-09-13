@@ -573,3 +573,18 @@ input:focus-visible {
     transition: none !important;
   }
 }
+
+
+/* ---------- Force flat Sphinx Design cards ---------- */
+
+.bd-article .sd-card,
+.bd-article .sd-card.sd-shadow-sm,
+.bd-article .sd-card.sd-shadow-md,
+.bd-article .sd-card.sd-shadow-lg {
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.bd-article .sd-card {
+    border: 1px solid var(--uics-border) !important;
+}
