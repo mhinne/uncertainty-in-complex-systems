@@ -346,6 +346,15 @@ blockquote,
   font-weight: 550;
 }
 
+/* Remove all Sphinx Design card shadows */
+.sd-card,
+.sd-card:hover,
+.sd-shadow-sm,
+.sd-shadow-md,
+.sd-shadow-lg {
+  box-shadow: none !important;
+}
+
 
 /* ---------- Publications ---------- */
 
