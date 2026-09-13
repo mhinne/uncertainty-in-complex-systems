@@ -16,9 +16,9 @@ figclass: mugshot
 Max Hinne is an associate professor at the Donders Institute. His research focuses on understanding and predicting the behaviour of complex dynamic systems. Doing this in a nuanced, interpretable, and efficient way requires a probabilistic perspective, which plays a central role in his work. Max combines both the development of state-of-the-art analyses and their applications in domains such as network neuroscience and healthcare.
 
 +++
-* http://www.maxhinne.com
-* maxhinne.bsky.social 
-* https://scholar.google.com/citations?user=oEtR-fkAAAAJ&hl=nl
+* [Personal website](http://www.maxhinne.com)
+* [Google Scholar](https://scholar.google.com/citations?user=oEtR-fkAAAAJ)
+* [Bluesky](https://bsky.app/profile/maxhinne.bsky.social)
 ````
 
 
@@ -51,8 +51,8 @@ align: right
 figclass: mugshot
 ---
 ```
-
-https://alineviol.net/
++++
+* [Personal website](https://alineviol.net/)
 
 +++
 ````
@@ -73,7 +73,7 @@ figclass: mugshot
 Rick is a PhD candidate at the Behavioural Science Institute. His research is part of the Hybrid Human AI Regulation (HHAIR) project, which aims to support the self-regulation of learning of primary school students working with adaptive learning technologies. Part of his research is in understanding what level of support children need based on data gathered by the adaptive learning technology, for which he employs Bayesian non-parametric clustering. Part of his research will be developing the tools that give the right support to the right student.
 
 +++
-* https://scholar.google.nl/citations?user=ZoeTpLcAAAAJ
+* [Google Scholar](https://scholar.google.nl/citations?user=ZoeTpLcAAAAJ)
 ````
 
 ````{card} 
