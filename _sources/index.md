@@ -8,7 +8,9 @@ hide-toc: true
 
 <div class="uics-lead">
 
-Welcome to the Uncertainty in Complex Systems lab website. At UICS, we develop probabilistic methods for understanding, predicting, and controlling complex dynamical systems. We are particularly interested in dealing with sparse, noisy, and indirect observations.
+Welcome to the Uncertainty in Complex Systems lab website. At UiCS, we develop probabilistic methods for understanding, predicting, and controlling complex dynamical systems. We are particularly interested in dealing with sparse, noisy, and indirect observations.
+
+UiCS is embedded within the [Donders Institute](https://www.ru.nl/donders-institute), at the [Radboud University](https://www.ru.nl/), in Nijmegen, The Netherlands.
 
 </div>
 
