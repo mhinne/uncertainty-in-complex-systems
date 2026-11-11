@@ -219,12 +219,60 @@ Often we are interested in *network structures*, such as between areas in the br
 
 $$
 	\begin{align*}
-		\mathbf{y}_i &\sim \mathcal{MVN}_d\left(\mathbd{0}, \mathbf{\Sigma}\right)
-	\end{align*}
-	
+        G & \sim \pi(G) \\
+        \mathbf{K} &\sim \mathcal{W}_G\left(\delta, \mathbf{D}\right) \\
+		\mathbf{y}_i &\sim \mathcal{MVN}_d\left(\mathbf{0}, \mathbf{K}^{-1}\right) && i=1, \ldots, n \enspace,
+	\end{align*}	
 $$
+with $G$ a binary graph and $\mathbf{K}=\mathbf{\Sigma}^{-1}$ the *precision* matrix of the multivariate Gaussian distribution, which can be scaled to partial correlations.
+
+Inference of the Gaussian graphical model has proven challenging, but can be done with [reversible-jump MCMC/SMC algorithms](https://onlinelibrary.wiley.com/doi/full/10.1002/sta4.66). The essential functions are implemented in **bamojax**, so learning the posterior distribution $p(G, \mathbf{K}\mid \mathbf{Y})$ is straightforward. We demonstrate it here on the network estimated from fMRI BOLD signal time series of subcortical brain areas of one subject in rest. This proceeds as follows:
+
+```python
+import h5py
+
+f = h5py.File('https://github.com/mhinne/mhinne.github.io/blob/master/data/BGGM_study_data.rar', 'r')
+
+data = f['timeseries']
+
+subj = 0
+
+Y = data[:, :, subj].squeeze().T  # we select the data for one subject
+
+n, p = Y.shape
+Yc = jnp.asarray(Y - Y.mean(axis=0))
+U = Yc.T @ Yc
+delta, D = 3.0, jnp.eye(p)
+
+# --- model ---
+ggm = Model('Gaussian graphical model')
+g = ggm.add_node('G', distribution=GraphBernoulli(p=p, edge_prob=0.5))
+k = ggm.add_node('K', distribution=GWishart, parents=dict(G=g, dof=delta, scale=D))
+z = ggm.add_node('Z', distribution=dist.MultivariateNormal,
+                 parents=dict(K=k),
+                 link_fn=lambda K: {'loc': jnp.zeros(p), 'precision_matrix': K},
+                 observations=Yc)
 
 
+# --- inference: Gibbs with the DRJ kernel on G (which also refreshes K) ---
+step_fns = {g: gwishart_drj, k: fixed_by_drj}
+step_fn_params = {g: dict(name='G', k_name='K', dof=delta, scale=D, n=n, U=U,
+                          sigma_g=1.0,
+                          logprior_G_fn=GraphBernoulli(p=p, edge_prob=0.5).log_prob),
+                  k: dict()}
+gibbs_kernel = gibbs_sampler(ggm, step_fns=step_fns, step_fn_params=step_fn_params)
+
+engine = SMCInference(model=ggm, num_chains=1, num_particles=2000, num_mutations=50, mcmc_kernel=gibbs_kernel)
+
+result = engine.run(jrnd.PRNGKey(0))
+
+```
+
+Visualizing the posterior of $G$ and of the partial correlations (scaled from $\mathbf{K}$) gives:
+
+![png](_static/bamojax_demo_files/bamojax_demo_ggm.png)
+
+Importantly, this used to take several months in 2014 on hardware of that time, and a serial MCMC implementation in Matlab. With bamojax, (semi-)modern GPUs, and SMC, the same result is achieved in 9 minutes.
 
 More examples of **bamojax** are available at https://github.com/UncertaintyInComplexSystems/bamojax!
 
