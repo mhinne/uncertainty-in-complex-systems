@@ -313,7 +313,7 @@ blockquote,
   object-fit: cover;
 
   border: none;
-  border-radius: 50%;
+  border-radius: 5%;
 }
 
 .sd-card-footer {
@@ -587,4 +587,13 @@ input:focus-visible {
 
 .bd-article .sd-card {
     border: 1px solid var(--uics-border) !important;
+}
+
+
+/* Remove borders around lab member cards */
+#lab-members .sd-card {
+    border: none !important;
+}
+#lab-members .sd-card-footer {
+    border-top: none !important;
 }

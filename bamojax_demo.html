@@ -338,6 +338,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-eight-schools">Example 1: Eight schools</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-generalized-wishart-processes">Example 2: Generalized Wishart processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-graphical-models">Gaussian graphical models</a></li>
 </ul>
             </nav>
         </div>
@@ -352,7 +353,12 @@ document.write(`
   <p><img alt="bamojax logo" src="_images/bamojax_logo_2x.png" /></p>
 <section class="tex2jax_ignore mathjax_ignore" id="bamojax">
 <h1>Bamojax<a class="headerlink" href="#bamojax" title="Permalink to this heading">#</a></h1>
-<p><a class="reference external" href="https://doi.org/10.5281/zenodo.15038847">Bamojax</a> is the Bayesian modelling in JAX toolkit developed by our group. It provides an interface between Bayesian computational modelling and fast inference using the <a class="reference external" href="https://blackjax-devs.github.io/blackjax/">Blackjax</a> software. In <strong>bamojax</strong>, you can specify your Bayesian model and chose an inference approach. If needed, <strong>bamojax</strong> automatically derives conditional densities to enable Gibbs sampling.</p>
+<p><a class="reference external" href="https://doi.org/10.5281/zenodo.15038847">Bamojax</a> is the <strong>Bayesian modelling and model comparison in JAX toolkit</strong> developed by our group. It provides an interface between Bayesian computational modelling and fast inference using the <a class="reference external" href="https://blackjax-devs.github.io/blackjax/">Blackjax</a> software. In <strong>bamojax</strong>, you can specify your Bayesian model and chose an inference approach. If needed, <strong>bamojax</strong> automatically derives conditional densities to enable Gibbs sampling.</p>
+<p>Installing <strong>bamojax</strong> is easy:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">bamojax</span> 
+</pre></div>
+</div>
+<p>will get you started!</p>
 <section id="example-1-eight-schools">
 <h2>Example 1: Eight schools<a class="headerlink" href="#example-1-eight-schools" title="Permalink to this heading">#</a></h2>
 <p>Here is a simple example of how to use <strong>bamojax</strong> for the famous eight-schools dataset. We use the following hierarchical model:</p>
@@ -523,6 +529,17 @@ document.write(`
 </pre></div>
 </div>
 <p><img alt="png" src="_images/bamojax_demo_gwp.png" /></p>
+</section>
+<section id="gaussian-graphical-models">
+<h2>Gaussian graphical models<a class="headerlink" href="#gaussian-graphical-models" title="Permalink to this heading">#</a></h2>
+<p>Often we are interested in <em>network structures</em>, such as between areas in the brain, or between symptoms of psychological disorders. We can estimate these structures using the <strong>Gaussian graphical model</strong>, which we may implement using the <a class="reference external" href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-6/issue-none/Efficient-Gaussian-graphical-model-determination-under-G-Wishart-prior-distributions/10.1214/12-EJS669.full"><span class="math notranslate nohighlight">\(G\)</span>-Wishart distribution</a>:</p>
+<div class="math notranslate nohighlight">
+\[
+	\begin{align*}
+		\mathbf{y}_i &amp;\sim \mathcal{MVN}_d\left(\mathbd{0}, \mathbf{\Sigma}\right)
+	\end{align*}
+	
+\]</div>
 <p>More examples of <strong>bamojax</strong> are available at <a class="github reference external" href="https://github.com/UncertaintyInComplexSystems/bamojax">UncertaintyInComplexSystems/bamojax</a>!</p>
 </section>
 </section>
@@ -593,6 +610,7 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-1-eight-schools">Example 1: Eight schools</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-2-generalized-wishart-processes">Example 2: Generalized Wishart processes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gaussian-graphical-models">Gaussian graphical models</a></li>
 </ul>
   </nav></div>
 

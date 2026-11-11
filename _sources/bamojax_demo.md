@@ -2,7 +2,15 @@
 
 # Bamojax
 
-[Bamojax](https://doi.org/10.5281/zenodo.15038847) is the Bayesian modelling in JAX toolkit developed by our group. It provides an interface between Bayesian computational modelling and fast inference using the [Blackjax](https://blackjax-devs.github.io/blackjax/) software. In **bamojax**, you can specify your Bayesian model and chose an inference approach. If needed, **bamojax** automatically derives conditional densities to enable Gibbs sampling.
+[Bamojax](https://doi.org/10.5281/zenodo.15038847) is the **Bayesian modelling and model comparison in JAX toolkit** developed by our group. It provides an interface between Bayesian computational modelling and fast inference using the [Blackjax](https://blackjax-devs.github.io/blackjax/) software. In **bamojax**, you can specify your Bayesian model and chose an inference approach. If needed, **bamojax** automatically derives conditional densities to enable Gibbs sampling.
+
+Installing **bamojax** is easy:
+
+```
+pip install bamojax 
+```
+
+will get you started!
 
 
 ## Example 1: Eight schools
@@ -205,5 +213,19 @@ final_state = result['final_state']
 ![png](_static/bamojax_demo_files/bamojax_demo_gwp.png)
     
 
+## Gaussian graphical models
+
+Often we are interested in *network structures*, such as between areas in the brain, or between symptoms of psychological disorders. We can estimate these structures using the **Gaussian graphical model**, which we may implement using the [$G$-Wishart distribution](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-6/issue-none/Efficient-Gaussian-graphical-model-determination-under-G-Wishart-prior-distributions/10.1214/12-EJS669.full):
+
+$$
+	\begin{align*}
+		\mathbf{y}_i &\sim \mathcal{MVN}_d\left(\mathbd{0}, \mathbf{\Sigma}\right)
+	\end{align*}
+	
+$$
+
+
 
 More examples of **bamojax** are available at https://github.com/UncertaintyInComplexSystems/bamojax!
+
+
