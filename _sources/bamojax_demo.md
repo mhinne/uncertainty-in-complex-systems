@@ -213,7 +213,7 @@ final_state = result['final_state']
 ![png](_static/bamojax_demo_files/bamojax_demo_gwp.png)
     
 
-## Gaussian graphical models
+## Example 3: Gaussian graphical models
 
 Often we are interested in *network structures*, such as between areas in the brain, or between symptoms of psychological disorders. We can estimate these structures using the **Gaussian graphical model**, which we may implement using the [$G$-Wishart distribution](https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-6/issue-none/Efficient-Gaussian-graphical-model-determination-under-G-Wishart-prior-distributions/10.1214/12-EJS669.full):
 
