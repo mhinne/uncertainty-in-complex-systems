@@ -1,0 +1,423 @@
+/* =====================================================================
+   Uncertainty in Complex Systems — minimal Jupyter Book / PyData theme
+   Replacement for _static/additional_style.css
+
+   Design: midnight blue, quiet typography, flat cards, restrained spacing.
+   Includes no chapter-pagination UI and a homepage-only TOC override.
+   Existing markup preserved: .uics-*, .pub, .sd-card, figure.mugshot.
+   ===================================================================== */
+
+/* Import must precede all other CSS rules. If fonts are already loaded in
+   _config.yml or the page template, this import can be removed. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --uics-bg: #fafbfc;
+  --uics-surface: #ffffff;
+  --uics-text: #253447;
+  --uics-muted: #647586;
+  --uics-border: #e2e8ed;
+  --uics-accent: #285c78;
+  --uics-accent-hover: #1b4359;
+  --uics-accent-soft: #eaf1f5;
+  --uics-sidebar: #f3f6f8;
+  --uics-content-width: 850px;
+  --uics-radius: 8px;
+  --uics-font-body: 'Open Sans', sans-serif;
+  --uics-font-heading: 'Montserrat', sans-serif;
+}
+
+/* Use theme variables where PyData supports them. Set the light-theme
+   variables only: keep PyData's own dark theme legible. */
+html[data-theme='light'] {
+  --pst-color-background: var(--uics-bg);
+  --pst-color-on-background: var(--uics-surface);
+  --pst-color-surface: var(--uics-surface);
+  --pst-color-primary: var(--uics-accent);
+  --pst-color-link: var(--uics-accent);
+  --pst-color-text-base: var(--uics-text);
+  --pst-color-text-muted: var(--uics-muted);
+  --pst-color-border: var(--uics-border);
+}
+
+html { font-size: 16px; }
+body {
+  font-family: var(--uics-font-body);
+  line-height: 1.72;
+  letter-spacing: 0;
+}
+html[data-theme='light'] body {
+  color: var(--uics-text);
+  background: var(--uics-bg);
+}
+
+/* ---------- Type hierarchy ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--uics-font-heading);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+html[data-theme='light'] h1,
+html[data-theme='light'] h2,
+html[data-theme='light'] h3,
+html[data-theme='light'] h4,
+html[data-theme='light'] h5,
+html[data-theme='light'] h6 { color: var(--uics-text); }
+
+h1 { font-size: clamp(2rem, 3.1vw, 2.65rem); font-weight: 600; margin-bottom: 1.35rem; }
+h2 { font-size: 1.55rem; font-weight: 600; margin: 2.8rem 0 1rem; }
+h3 { font-size: 1.18rem; font-weight: 600; margin: 2rem 0 0.85rem; }
+h4, h5, h6 { font-weight: 600; }
+strong, b { font-weight: 700; }
+
+/* ---------- Reading area ---------- */
+.bd-main .bd-content .bd-article-container { max-width: var(--uics-content-width); }
+.bd-article { padding-top: 2rem; }
+.bd-article p { margin-bottom: 1.2rem; }
+.bd-article hr {
+  border: 0;
+  border-top: 1px solid var(--uics-border);
+  margin: 2rem 0;
+}
+html[data-theme='light'] .bd-article hr { border-color: var(--uics-border); }
+
+/* Links: scope link treatment to content to avoid changing theme controls. */
+html[data-theme='light'] .bd-article a:not(.headerlink):not(.uics-button) {
+  color: var(--uics-accent);
+  text-decoration-color: rgba(40, 92, 120, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+html[data-theme='light'] .bd-article a:not(.headerlink):not(.uics-button):hover {
+  color: var(--uics-accent-hover);
+  text-decoration-color: currentColor;
+}
+
+/* ---------- Header / navigation ---------- */
+html[data-theme='light'] .bd-header {
+  background: rgba(250, 251, 252, 0.97) !important;
+  border-bottom: 1px solid var(--uics-border);
+  box-shadow: none !important;
+  backdrop-filter: blur(8px);
+}
+html[data-theme='light'] .bd-sidebar-primary,
+html[data-theme='light'] .bd-sidebar-primary .sidebar-header-items {
+  background: var(--uics-sidebar);
+}
+html[data-theme='light'] .bd-sidebar-primary {
+  border-right: 1px solid var(--uics-border);
+}
+.bd-links .caption {
+  font-family: var(--uics-font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  margin-top: 1.4rem;
+}
+html[data-theme='light'] .bd-links .caption { color: var(--uics-muted); }
+.bd-sidebar-primary .nav-link,
+.bd-links .nav-link {
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  text-decoration: none;
+}
+html[data-theme='light'] .bd-sidebar-primary .nav-link,
+html[data-theme='light'] .bd-links a { color: #4d6070; }
+html[data-theme='light'] .bd-sidebar-primary .nav-link:hover,
+html[data-theme='light'] .bd-links a:hover {
+  color: var(--uics-accent-hover);
+  background: var(--uics-accent-soft);
+}
+html[data-theme='light'] .bd-links .active > .nav-link,
+html[data-theme='light'] .bd-links .nav-link.active {
+  color: var(--uics-accent);
+  background: var(--uics-accent-soft);
+  font-weight: 600;
+}
+/* The short homepage needs no in-page table of contents. The :has() rule
+   is scoped to pages containing the existing .uics-hero element. */
+@supports selector(body:has(.uics-hero)) {
+  body:has(.uics-hero) .bd-sidebar-secondary { display: none; }
+}
+.bd-sidebar-secondary { font-size: 0.88rem; }
+.bd-sidebar-secondary .onthispage { font-weight: 600; }
+html[data-theme='light'] .bd-sidebar-secondary .nav-link { color: var(--uics-muted); }
+html[data-theme='light'] .bd-sidebar-secondary .nav-link.active {
+  color: var(--uics-accent);
+  font-weight: 600;
+}
+
+/* Don't force overflow:hidden on the primary sidebar: long navigation
+   should remain scrollable on smaller screens. */
+
+/* ---------- Quotes ---------- */
+html[data-theme='light'] .bd-article blockquote,
+html[data-theme='light'] .bd-article .epigraph {
+  border-left: 3px solid var(--uics-accent);
+  background: transparent;
+  color: #536575;
+}
+.bd-article blockquote,
+.bd-article .epigraph {
+  margin: 2.3rem 0;
+  padding: 0.25rem 0 0.25rem 1.3rem;
+}
+.epigraph { font-size: 1.04rem; font-style: italic; }
+html[data-theme='light'] .epigraph .attribution { color: var(--uics-muted); }
+.epigraph .attribution { font-size: 0.9rem; }
+
+/* ---------- Member cards (Sphinx Design) ----------
+   Intentionally flat: no borders, shadows, or hover movement.
+   These rules apply to all Sphinx Design cards on the site; if you add
+   other types of card later, scope them with a custom wrapper class. */
+.bd-article .sd-card,
+.bd-article .sd-card.sd-shadow-sm,
+.bd-article .sd-card.sd-shadow-md,
+.bd-article .sd-card.sd-shadow-lg {
+  width: 100%;
+  max-width: none;
+  margin: 0.8rem 0 1.5rem;
+  border: 0 !important;
+  border-radius: var(--uics-radius);
+  background: transparent;
+  box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+  overflow: visible;
+}
+.bd-article .sd-card:hover {
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+.sd-card-header {
+  padding: 1.1rem 0 0.25rem;
+  border-bottom: 0;
+  background: transparent;
+  text-align: left;
+  font-family: var(--uics-font-heading);
+  font-size: 1.14rem;
+  font-weight: 600;
+}
+html[data-theme='light'] .sd-card-header { color: var(--uics-text); }
+.sd-card-body {
+  padding: 0.5rem 0 0.7rem;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.sd-card-body figure.mugshot {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+}
+.sd-card-body figure.mugshot img {
+  display: block;
+  width: 132px;
+  height: 132px;
+  object-fit: cover;
+  border: 0;
+  border-radius: 8px;
+}
+.sd-card-footer {
+  width: 100%;
+  padding: 0.5rem 0 0.9rem;
+  text-align: left !important;
+  border-top: 0 !important;
+  background: transparent !important;
+}
+.sd-card-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.sd-card-footer li { margin: 0; }
+.sd-card-footer a { font-size: 0.88rem; font-weight: 600; }
+
+/* ---------- Publications ---------- */
+.pub {
+  list-style: none;
+  margin: 0;
+  padding: 1.25rem 0 1.4rem;
+  border-bottom: 1px solid var(--uics-border);
+}
+.pub::marker { content: ''; }
+.bd-article ul:has(.pub) { padding-left: 0; }
+.pub a { text-decoration: none !important; }
+.pub a strong {
+  font-family: var(--uics-font-heading);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  font-weight: 600;
+}
+.pub em {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  font-style: normal;
+}
+.pub small {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.83rem;
+}
+html[data-theme='light'] .pub em { color: #526373; }
+html[data-theme='light'] .pub small { color: var(--uics-muted); }
+
+/* ---------- Code cells ---------- */
+.bd-article pre { border-radius: 7px; box-shadow: none; }
+.bd-article code { font-size: 0.91em; }
+html[data-theme='light'] .bd-article div.highlight,
+html[data-theme='light'] .bd-article .cell_input {
+  background: #f3f6f8;
+  border-color: var(--uics-border);
+  border-radius: 7px;
+}
+html[data-theme='light'] .bd-article div.highlight pre {
+  background: transparent;
+}
+.bd-article div.highlight pre { line-height: 1.55; }
+
+/* ---------- Homepage (existing .uics-* markup) ---------- */
+.uics-hero { padding: 2.6rem 0 3.2rem; }
+.uics-kicker {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+html[data-theme='light'] .uics-kicker { color: var(--uics-accent); }
+.uics-hero h1 { max-width: 760px; margin-bottom: 1.2rem; }
+.uics-lead {
+  max-width: 640px;
+  font-size: clamp(1.08rem, 1.7vw, 1.24rem);
+  line-height: 1.7;
+}
+html[data-theme='light'] .uics-lead { color: #4d6070; }
+.uics-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.8rem;
+}
+.bd-article a.uics-button {
+  display: inline-block;
+  padding: 0.65rem 1.15rem;
+  border: 1px solid var(--uics-border);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background-color 150ms ease, border-color 150ms ease;
+}
+html[data-theme='light'] .bd-article a.uics-button {
+  color: var(--uics-text);
+  background: var(--uics-surface);
+}
+html[data-theme='light'] .bd-article a.uics-button:hover {
+  color: var(--uics-accent);
+  border-color: var(--uics-accent);
+}
+html[data-theme='light'] .bd-article a.uics-button-primary {
+  color: #fff !important;
+  background: var(--uics-accent);
+  border-color: var(--uics-accent);
+}
+html[data-theme='light'] .bd-article a.uics-button-primary:hover {
+  color: #fff !important;
+  background: var(--uics-accent-hover);
+  border-color: var(--uics-accent-hover);
+}
+.uics-topics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.8rem 2.4rem;
+  margin: 2.2rem 0 3rem;
+}
+.uics-topic {
+  padding: 1rem 0 0;
+  border: 0;
+  border-top: 2px solid var(--uics-border);
+  border-radius: 0;
+  background: transparent;
+}
+html[data-theme='light'] .uics-topic { border-top-color: var(--uics-border); }
+.uics-topic strong {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-family: var(--uics-font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.uics-topic span { font-size: 0.92rem; }
+html[data-theme='light'] .uics-topic span { color: var(--uics-muted); }
+
+/* ---------- Book-style pagination ----------
+   These chapter links don't fit a small site with independent pages. */
+.prev-next-area { display: none !important; }
+
+/* ---------- Footer, accessibility ---------- */
+footer.bd-footer-content {
+  margin-top: 3.5rem;
+  padding-top: 1.2rem;
+  font-size: 0.8rem;
+}
+/* Hide author attribution only if it is rendered in these dedicated nodes.
+   No generic footer elements are hidden, so copyright remains visible. */
+.bd-footer-content .author,
+.bd-footer-content .authors,
+.bd-footer-content .component-author { display: none; }
+html[data-theme='light'] footer.bd-footer-content {
+  color: var(--uics-muted);
+  border-top: 1px solid var(--uics-border);
+}
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid var(--uics-accent);
+  outline-offset: 3px;
+}
+
+/* ---------- Dark mode: allow PyData to choose its own dark surfaces ---------- */
+html[data-theme='dark'] .bd-article .sd-card,
+html[data-theme='dark'] .sd-card-header,
+html[data-theme='dark'] .sd-card-footer,
+html[data-theme='dark'] .uics-topic {
+  background: transparent;
+}
+html[data-theme='dark'] .uics-topic,
+html[data-theme='dark'] .pub {
+  border-color: var(--pst-color-border);
+}
+html[data-theme='dark'] .bd-article a.uics-button {
+  border-color: var(--pst-color-border);
+  color: var(--pst-color-text-base);
+}
+html[data-theme='dark'] .bd-article a.uics-button-primary {
+  background: var(--pst-color-primary);
+  border-color: var(--pst-color-primary);
+  color: var(--pst-color-on-primary, #fff);
+}
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 768px) {
+  .bd-article { padding-top: 1rem; }
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.35rem; }
+  .uics-hero { padding-top: 1.7rem; padding-bottom: 2.2rem; }
+  .uics-topics { grid-template-columns: 1fr; gap: 1.1rem; }
+  .sd-card-body figure.mugshot { float: none; margin: 0 0 1rem; }
+  .sd-card-body figure.mugshot img { width: 120px; height: 120px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

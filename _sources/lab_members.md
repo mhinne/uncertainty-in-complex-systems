@@ -1,0 +1,187 @@
+# Lab members
+
+## Principal Investigator
+
+````{card} 
+
+Max Hinne
+^^^
+```{figure} _static/images/max.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Max Hinne is an associate professor at the Donders Institute. His research focuses on understanding and predicting the behaviour of complex dynamic systems. Doing this in a nuanced, interpretable, and efficient way requires a probabilistic perspective, which plays a central role in his work. Max combines both the development of state-of-the-art analyses and their applications in domains such as network neuroscience and healthcare.
+
++++
+* [Personal website](http://www.maxhinne.com)
+* [Google Scholar](https://scholar.google.com/citations?user=oEtR-fkAAAAJ)
+* [Bluesky](https://bsky.app/profile/maxhinne.bsky.social)
+````
+
+
+
+## Postdocs
+
+````{card} 
+
+Josh Ring
+^^^
+```{figure} _static/images/josh.png
+---
+align: right
+figclass: mugshot
+---
+```
+
+Lorem ipsum.
+
++++
+````
+
+
+
+## PhD students
+
+````{card} 
+
+Rick Dijkstra
+^^^
+```{figure} _static/images/rick.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Rick is a PhD candidate at the Behavioural Science Institute. His research is part of the Hybrid Human AI Regulation (HHAIR) project, which aims to support the self-regulation of learning of primary school students working with adaptive learning technologies. Part of his research is in understanding what level of support children need based on data gathered by the adaptive learning technology, for which he employs Bayesian non-parametric clustering. Part of his research will be developing the tools that give the right support to the right student.
+
++++
+* [Google Scholar](https://scholar.google.nl/citations?user=ZoeTpLcAAAAJ)
+````
+
+````{card} 
+
+Hester Huijsdens
+^^^
+```{figure} _static/images/hester.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+Hester is a PhD candidate at the Donders Centre for Cognition. Her project aims to study dynamic brain connectivity, and how this might be linked to cognition. She uses Bayesian non-parametric models to estimate how brain connectivity changes over time (or as a function of another covariate).
+
+````
+
+````{card} 
+
+Gelana Khazeeva
+^^^
+```{figure} _static/images/gelana.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+My research focuses on the application of ML and DL in human genetics. In particular, I aim to develop an AI-based learning algorithm, that integrates genetic and phenotypic information and is able to automatically diagnose patients with genetic diseases. This will reduce the amount of time spent on data interpretation, thereby also reducing turn-around times for genetic tests, and will improve diagnoses by reducing the risk of human error.
+
+
+````
+
+````{card} 
+
+David Leeftink
+^^^
+```{figure} _static/images/david.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+David is a PhD student at the Donders Centre for Cognition, co-advised by prof. Marcel van Gerven and dr. Max Hinne. His research focuses on developing probabilistic models that can efficiently and effectively solve real-world control problems in the face of uncertainty. As part of the Uncertainty in Complex systems lab, he is currently working on using Bayesian non-parametric models for reinforcement learning and model predictive control. When not doing research, he can be found playing guitar, cycling, or playing tennis.
+
++++
+
+[Personal website](https://davidleeftink.github.io/)
+
+````
+
+````{card} 
+
+Olesya Moiseenko
+^^^
+```{figure} _static/images/olesya.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Olesya is a PhD candidate at the Donders Center of Cognition. Her research focuses on cognitive and social mechanisms that make infants such good learners. The project employs Bayesian modelling to find out what guides infants' attention in a social setting.
+
+
+````
+
+````{card} 
+
+Zo&#233; Sandle
+^^^
+```{figure} _static/images/zoe.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+I am interested in the (neuro)cognitive and neural underpinnings of antisocial behaviors. Through my research I hope to better understand the relationship between these variables and how they translate into individual behavioral differences. Methodologically, I am working with Bayesian nonparametric models in order to meaningfully characterize individual profiles and cluster them. For this, I am using large existing datasets (e.g.  the ABCD study) which enable the models to be tested in different populations. My goal is to contribute to a better understanding of antisocial behaviors, why and how they differ, as well as to ultimately help clinicians to better tailor their interventions to the needs of their patients. When not working, I enjoy spending time in nature and being creative.
+
+
+````
+
+## MSc students
+
+````{card} 
+
+Yves van Haaren
+^^^
+```{figure} _static/images/yves.jpg
+---
+align: right
+figclass: mugshot
+---
+```
+
+Yves is an MSc student supervised by Max Hinne. He has a particular interest in the theory of learning and algorithms with provable behavior. His research focuses on Bayesian methods for efficient model selection. Outside of academia, he likes to go running and do calisthenics.
+
+
+````
+
+### Postdoc alumni
+
+* [Aline Viol](https://alineviol.net/)
+
+### PhD alumni
+
+* Fabian Dablander, thesis title: "Changing Systems: Statistical, Causal, and Dynamical Perspectives."
+* Lex Dingemans, thesis title: "Next-generation phenotyping in neurodevelopmental disorders: Applications of artificial intelligence in clinical genetics"
+
+### MSc alumni
+
+* Janna van Assen, thesis title: "Bayesian Model Comparison using Reversible Jump Sequential Monte Carlo"
+* Ella Has, thesis title: "Sparse Factored Wishart Process for Scalable and Interpretable Time-Varying Functional Connectivity Estimation"
+* Thomas Vissers, thesis title: "Wishart processes for estimating dynamic functional connectivity changes associated with temporal lobe epilepsy"
+* Benedetta Felici, thesis title: "State-space Wishart Processes for Multivariate Count Data Time Series Analysis"
+* David Cicchetti, thesis title: "Detecting Change Points in Time Series with Gaussian Processes"
+* Jasper Albers, thesis title: "Bi-directional Interrupted Time series analysis"
+* Arne Diehl, thesis title: "On the Applicability of Nonparametric Graphon Models to Structural Connectivity"
+* Zuzanna Fendor, thesis title: "Predicting Depression with Bayesian Nonparametric Models"
+* Yangchu Huang, thesis title: "Identifying shared structures between structural and functional brain networks using a hyperbolic latent space model for multilayer networks"
+* Pleun Scholten, thesis title: "Should we Continue to Binarize? The Effects of Binarizing Functional Connectivity Networks on the Task-Specific Information in Latent Space Models of Varying Geometries"
+* David Leeftink, thesis title: "Continuous-time Model Predictive Control with Gaussian Processes: Learning-based Model Predictive Control with Gaussian Processes ODEs"
+* Callum Kartoredjo, thesis title: "The Importance of Inter-Individual Differences in Cognitive Decline in Modelling Brain Connectomics with Spatio-Temporal Gaussian Processes"
+
