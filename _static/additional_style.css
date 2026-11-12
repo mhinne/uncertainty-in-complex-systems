@@ -1,11 +1,14 @@
 /* =====================================================================
    Uncertainty in Complex Systems — minimal Jupyter Book / PyData theme
    Replacement for _static/additional_style.css
+
+   Design: midnight blue, quiet typography, flat cards, restrained spacing.
+   Includes no chapter-pagination UI and a homepage-only TOC override.
+   Existing markup preserved: .uics-*, .pub, .sd-card, figure.mugshot.
    ===================================================================== */
 
 /* Import must precede all other CSS rules. If fonts are already loaded in
    _config.yml or the page template, this import can be removed. */
-   
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 :root {
@@ -134,6 +137,11 @@ html[data-theme='light'] .bd-links .nav-link.active {
   background: var(--uics-accent-soft);
   font-weight: 600;
 }
+/* The short homepage needs no in-page table of contents. The :has() rule
+   is scoped to pages containing the existing .uics-hero element. */
+@supports selector(body:has(.uics-hero)) {
+  body:has(.uics-hero) .bd-sidebar-secondary { display: none; }
+}
 .bd-sidebar-secondary { font-size: 0.88rem; }
 .bd-sidebar-secondary .onthispage { font-weight: 600; }
 html[data-theme='light'] .bd-sidebar-secondary .nav-link { color: var(--uics-muted); }
@@ -186,7 +194,7 @@ html[data-theme='light'] .epigraph .attribution { color: var(--uics-muted); }
   transform: none !important;
 }
 .sd-card-header {
-  padding: 1rem 0 0.25rem;
+  padding: 1.1rem 0 0.25rem;
   border-bottom: 0;
   background: transparent;
   text-align: left;
@@ -235,26 +243,28 @@ html[data-theme='light'] .sd-card-header { color: var(--uics-text); }
 .pub {
   list-style: none;
   margin: 0;
-  padding: 1.05rem 0 1.2rem;
+  padding: 1.25rem 0 1.4rem;
   border-bottom: 1px solid var(--uics-border);
 }
 .pub::marker { content: ''; }
 .bd-article ul:has(.pub) { padding-left: 0; }
 .pub a { text-decoration: none !important; }
 .pub a strong {
-  font-size: 1.02rem;
-  line-height: 1.48;
-  font-weight: 700;
+  font-family: var(--uics-font-heading);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  font-weight: 600;
 }
 .pub em {
-  display: inline-block;
-  margin-top: 0.35rem;
-  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
   font-style: normal;
 }
 .pub small {
-  display: inline-block;
-  margin-top: 0.15rem;
+  display: block;
+  margin-top: 0.25rem;
   font-size: 0.83rem;
 }
 html[data-theme='light'] .pub em { color: #526373; }
@@ -275,7 +285,7 @@ html[data-theme='light'] .bd-article div.highlight pre {
 .bd-article div.highlight pre { line-height: 1.55; }
 
 /* ---------- Homepage (existing .uics-* markup) ---------- */
-.uics-hero { padding: 3rem 0 2.3rem; }
+.uics-hero { padding: 2.6rem 0 3.2rem; }
 .uics-kicker {
   font-size: 0.76rem;
   font-weight: 700;
@@ -286,9 +296,9 @@ html[data-theme='light'] .bd-article div.highlight pre {
 html[data-theme='light'] .uics-kicker { color: var(--uics-accent); }
 .uics-hero h1 { max-width: 760px; margin-bottom: 1.2rem; }
 .uics-lead {
-  max-width: 700px;
+  max-width: 640px;
   font-size: clamp(1.08rem, 1.7vw, 1.24rem);
-  line-height: 1.65;
+  line-height: 1.7;
 }
 html[data-theme='light'] .uics-lead { color: #4d6070; }
 .uics-links {
@@ -299,9 +309,10 @@ html[data-theme='light'] .uics-lead { color: #4d6070; }
 }
 .bd-article a.uics-button {
   display: inline-block;
-  padding: 0.65rem 1rem;
+  padding: 0.65rem 1.15rem;
   border: 1px solid var(--uics-border);
-  border-radius: 6px;
+  border-radius: 5px;
+  font-size: 0.9rem;
   font-weight: 600;
   text-decoration: none !important;
   transition: background-color 150ms ease, border-color 150ms ease;
@@ -327,29 +338,48 @@ html[data-theme='light'] .bd-article a.uics-button-primary:hover {
 .uics-topics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem 1.3rem;
-  margin: 1.9rem 0 2.4rem;
+  gap: 1.8rem 2.4rem;
+  margin: 2.2rem 0 3rem;
 }
 .uics-topic {
-  padding: 0.95rem 0 1rem;
+  padding: 1rem 0 0;
   border: 0;
   border-top: 2px solid var(--uics-border);
   border-radius: 0;
   background: transparent;
 }
 html[data-theme='light'] .uics-topic { border-top-color: var(--uics-border); }
-.uics-topic strong { display: block; margin-bottom: 0.35rem; }
+.uics-topic strong {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-family: var(--uics-font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
 .uics-topic span { font-size: 0.92rem; }
 html[data-theme='light'] .uics-topic span { color: var(--uics-muted); }
 
+/* ---------- Book-style pagination ----------
+   These chapter links don't fit a small site with independent pages. */
+.prev-next-area { display: none !important; }
+
 /* ---------- Footer, accessibility ---------- */
-footer.bd-footer-content { margin-top: 3.5rem; padding-top: 1.4rem; }
+footer.bd-footer-content {
+  margin-top: 3.5rem;
+  padding-top: 1.2rem;
+  font-size: 0.8rem;
+}
+/* Hide author attribution only if it is rendered in these dedicated nodes.
+   No generic footer elements are hidden, so copyright remains visible. */
+.bd-footer-content .author,
+.bd-footer-content .authors,
+.bd-footer-content .component-author { display: none; }
 html[data-theme='light'] footer.bd-footer-content {
   color: var(--uics-muted);
   border-top: 1px solid var(--uics-border);
 }
 a:focus-visible, button:focus-visible, input:focus-visible {
-  outline: 3px solid var(--uics-accent);
+  outline: 2px solid var(--uics-accent);
   outline-offset: 3px;
 }
 
@@ -379,8 +409,8 @@ html[data-theme='dark'] .bd-article a.uics-button-primary {
   .bd-article { padding-top: 1rem; }
   h1 { font-size: 1.9rem; }
   h2 { font-size: 1.35rem; }
-  .uics-hero { padding-top: 1.7rem; }
-  .uics-topics { grid-template-columns: 1fr; gap: 0.4rem; }
+  .uics-hero { padding-top: 1.7rem; padding-bottom: 2.2rem; }
+  .uics-topics { grid-template-columns: 1fr; gap: 1.1rem; }
   .sd-card-body figure.mugshot { float: none; margin: 0 0 1rem; }
   .sd-card-body figure.mugshot img { width: 120px; height: 120px; }
 }

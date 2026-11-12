@@ -1,5 +1,8 @@
 ---
 hide-toc: true
+html:
+  theme:
+    sidebar_secondary: false
 ---
 
 <div class="uics-hero">

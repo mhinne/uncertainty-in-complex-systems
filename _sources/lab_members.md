@@ -29,7 +29,7 @@ Max Hinne is an associate professor at the Donders Institute. His research focus
 
 Josh Ring
 ^^^
-```{figure} _static/images/placeholder.jpg
+```{figure} _static/images/josh.png
 ---
 align: right
 figclass: mugshot
@@ -43,24 +43,13 @@ Lorem ipsum.
 
 ````{card} 
 
-Aline Viol
-^^^
-```{figure} _static/images/placeholder.jpg
----
-align: right
-figclass: mugshot
----
-```
-+++
-* [Personal website](https://alineviol.net/)
 
-+++
-````
 
 
 ## PhD students
 
 ````{card} 
+
 Rick Dijkstra
 ^^^
 ```{figure} _static/images/rick.jpg
@@ -178,6 +167,10 @@ Yves is an MSc student supervised by Max Hinne. He has a particular interest in 
 +++
 
 ````
+
+### Postdoc alumni
+
+* [Aline Viol](https://alineviol.net/)
 
 ### PhD alumni
 

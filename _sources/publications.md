@@ -1,3 +1,9 @@
+---
+html:
+  theme:
+    sidebar_secondary: false
+---
+
 # Publications
 
 Our most recent publications:
