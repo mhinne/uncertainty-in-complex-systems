@@ -1,599 +1,393 @@
-/* -------------------------------------------------------
-   Uncertainty in Complex Systems
-   Minimal Jupyter Book theme
-   ------------------------------------------------------- */
+/* =====================================================================
+   Uncertainty in Complex Systems — minimal Jupyter Book / PyData theme
+   Replacement for _static/additional_style.css
+   ===================================================================== */
+
+/* Import must precede all other CSS rules. If fonts are already loaded in
+   _config.yml or the page template, this import can be removed. */
+   
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --uics-bg: #faf9f7;
+  --uics-bg: #fafbfc;
   --uics-surface: #ffffff;
-  --uics-text: #252a2e;
-  --uics-muted: #646b70;
-  --uics-border: #e4e2dd;
-
-  --uics-accent: #8b2f2a;
-  --uics-accent-hover: #681f1b;
-  --uics-accent-soft: #f4ebe9;
-
-  --uics-sidebar: #f4f2ee;
+  --uics-text: #253447;
+  --uics-muted: #647586;
+  --uics-border: #e2e8ed;
+  --uics-accent: #285c78;
+  --uics-accent-hover: #1b4359;
+  --uics-accent-soft: #eaf1f5;
+  --uics-sidebar: #f3f6f8;
+  --uics-content-width: 850px;
+  --uics-radius: 8px;
+  --uics-font-body: 'Open Sans', sans-serif;
+  --uics-font-heading: 'Montserrat', sans-serif;
 }
 
-
-/* ---------- Typography ---------- */
-
-html {
-  font-size: 16px;
+/* Use theme variables where PyData supports them. Set the light-theme
+   variables only: keep PyData's own dark theme legible. */
+html[data-theme='light'] {
+  --pst-color-background: var(--uics-bg);
+  --pst-color-on-background: var(--uics-surface);
+  --pst-color-surface: var(--uics-surface);
+  --pst-color-primary: var(--uics-accent);
+  --pst-color-link: var(--uics-accent);
+  --pst-color-text-base: var(--uics-text);
+  --pst-color-text-muted: var(--uics-muted);
+  --pst-color-border: var(--uics-border);
 }
 
+html { font-size: 16px; }
 body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
-
+  font-family: var(--uics-font-body);
+  line-height: 1.72;
+  letter-spacing: 0;
+}
+html[data-theme='light'] body {
   color: var(--uics-text);
   background: var(--uics-bg);
-
-  line-height: 1.72;
-  letter-spacing: 0.002em;
 }
 
-p,
-li {
-  font-size: 1rem;
-}
-
+/* ---------- Type hierarchy ---------- */
 h1, h2, h3, h4, h5, h6 {
-  font-family: inherit;
-  color: var(--uics-text);
-  letter-spacing: -0.02em;
-  line-height: 1.22;
+  font-family: var(--uics-font-heading);
+  line-height: 1.3;
+  letter-spacing: -0.025em;
 }
+html[data-theme='light'] h1,
+html[data-theme='light'] h2,
+html[data-theme='light'] h3,
+html[data-theme='light'] h4,
+html[data-theme='light'] h5,
+html[data-theme='light'] h6 { color: var(--uics-text); }
 
-h1 {
-  font-size: clamp(2.15rem, 5vw, 3rem);
-  font-weight: 650;
-  margin-bottom: 1.3rem;
+h1 { font-size: clamp(2rem, 3.1vw, 2.65rem); font-weight: 600; margin-bottom: 1.35rem; }
+h2 { font-size: 1.55rem; font-weight: 600; margin: 2.8rem 0 1rem; }
+h3 { font-size: 1.18rem; font-weight: 600; margin: 2rem 0 0.85rem; }
+h4, h5, h6 { font-weight: 600; }
+strong, b { font-weight: 700; }
+
+/* ---------- Reading area ---------- */
+.bd-main .bd-content .bd-article-container { max-width: var(--uics-content-width); }
+.bd-article { padding-top: 2rem; }
+.bd-article p { margin-bottom: 1.2rem; }
+.bd-article hr {
+  border: 0;
+  border-top: 1px solid var(--uics-border);
+  margin: 2rem 0;
 }
+html[data-theme='light'] .bd-article hr { border-color: var(--uics-border); }
 
-h2 {
-  font-size: 1.65rem;
-  font-weight: 620;
-  margin-top: 3rem;
-  margin-bottom: 1.1rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-  font-weight: 620;
-  margin-top: 2.2rem;
-}
-
-strong {
-  font-weight: 620;
-}
-
-
-/* ---------- Main content ---------- */
-
-.bd-main .bd-content .bd-article-container {
-  max-width: var(--uics-content-width);
-}
-
-.bd-article {
-  padding-top: 2.2rem;
-}
-
-.bd-article p {
-  margin-bottom: 1.25rem;
-}
-
-/* ---------- Links ---------- */
-
-a {
+/* Links: scope link treatment to content to avoid changing theme controls. */
+html[data-theme='light'] .bd-article a:not(.headerlink):not(.uics-button) {
   color: var(--uics-accent);
-  text-decoration-color: rgba(139, 47, 42, 0.35);
+  text-decoration-color: rgba(40, 92, 120, 0.35);
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
+  text-underline-offset: 0.2em;
 }
-
-a:hover,
-a:focus {
+html[data-theme='light'] .bd-article a:not(.headerlink):not(.uics-button):hover {
   color: var(--uics-accent-hover);
-  text-decoration-color: var(--uics-accent-hover);
+  text-decoration-color: currentColor;
 }
 
-.bd-content a:not(.headerlink) {
-  color: #8b2f2a;
-  text-decoration-color: rgba(139, 47, 42, 0.35);
-}
-
-.bd-content a:not(.headerlink):hover,
-.bd-content a:not(.headerlink):focus {
-  color: #681f1b;
-  text-decoration-color: #681f1b;
-}
-
-/* ---------- Left sidebar link colors ---------- */
-
-.bd-sidebar-primary a,
-.bd-sidebar-primary a:visited,
-.bd-sidebar-primary .nav-link,
-.bd-sidebar-primary .nav-link:visited,
-.bd-links a,
-.bd-links a:visited {
-  color: #4e5559 !important;
-  text-decoration: none;
-}
-
-.bd-sidebar-primary a:hover,
-.bd-sidebar-primary a:focus,
-.bd-sidebar-primary .nav-link:hover,
-.bd-sidebar-primary .nav-link:focus,
-.bd-links a:hover,
-.bd-links a:focus {
-  color: #8b2f2a !important;
-  background: #f4ebe9;
-  text-decoration: none;
-}
-
-.bd-links .active > .nav-link,
-.bd-links .active > .nav-link:visited,
-.bd-links .nav-link.active,
-.bd-links .nav-link.active:visited {
-  color: #8b2f2a !important;
-  font-weight: 600;
-  background: #f4ebe9;
-}
-
-.bd-links .caption {
-  color: #7b7f82;
-  font-size: 0.73rem;
-  font-weight: 700;
-  letter-spacing: 0.085em;
-  text-transform: uppercase;
-  margin-top: 1.5rem;
-}
-
-
-/* ---------- Left navigation ---------- */
-
-.bd-sidebar-primary {
-  background: var(--uics-sidebar);
-  border-right: 1px solid var(--uics-border);
-}
-
-.bd-sidebar-primary .sidebar-header-items {
-  background: var(--uics-sidebar);
-}
-
-.bd-links .nav-link {
-  color: #4e5559;
-  border-radius: 6px;
-  padding-top: 0.42rem;
-  padding-bottom: 0.42rem;
-}
-
-.bd-links .nav-link:hover {
-  color: var(--uics-text);
-  background: rgba(255, 255, 255, 0.65);
-}
-
-.bd-links .active > .nav-link,
-.bd-links .nav-link.active {
-  color: var(--uics-accent);
-  font-weight: 600;
-  background: var(--uics-accent-soft);
-}
-
-.bd-links .caption {
-  color: #7b7f82;
-  font-size: 0.73rem;
-  font-weight: 700;
-  letter-spacing: 0.085em;
-  text-transform: uppercase;
-  margin-top: 1.5rem;
-}
-
-
-/* ---------- Page table of contents ---------- */
-
-.bd-sidebar-secondary {
-  font-size: 0.88rem;
-}
-
-.bd-sidebar-secondary .onthispage {
-  font-weight: 600;
-}
-
-.bd-sidebar-secondary .nav-link {
-  color: var(--uics-muted);
-}
-
-.bd-sidebar-secondary .nav-link.active {
-  color: var(--uics-accent);
-  font-weight: 600;
-}
-
-
-/* ---------- Header ---------- */
-
-.bd-header {
-  background: rgba(250, 249, 247, 0.96) !important;
+/* ---------- Header / navigation ---------- */
+html[data-theme='light'] .bd-header {
+  background: rgba(250, 251, 252, 0.97) !important;
   border-bottom: 1px solid var(--uics-border);
   box-shadow: none !important;
   backdrop-filter: blur(8px);
 }
-
-.bd-header .navbar-header-items__center,
-.bd-header .navbar-header-items__end {
-  color: var(--uics-text);
+html[data-theme='light'] .bd-sidebar-primary,
+html[data-theme='light'] .bd-sidebar-primary .sidebar-header-items {
+  background: var(--uics-sidebar);
+}
+html[data-theme='light'] .bd-sidebar-primary {
+  border-right: 1px solid var(--uics-border);
+}
+.bd-links .caption {
+  font-family: var(--uics-font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.085em;
+  text-transform: uppercase;
+  margin-top: 1.4rem;
+}
+html[data-theme='light'] .bd-links .caption { color: var(--uics-muted); }
+.bd-sidebar-primary .nav-link,
+.bd-links .nav-link {
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  text-decoration: none;
+}
+html[data-theme='light'] .bd-sidebar-primary .nav-link,
+html[data-theme='light'] .bd-links a { color: #4d6070; }
+html[data-theme='light'] .bd-sidebar-primary .nav-link:hover,
+html[data-theme='light'] .bd-links a:hover {
+  color: var(--uics-accent-hover);
+  background: var(--uics-accent-soft);
+}
+html[data-theme='light'] .bd-links .active > .nav-link,
+html[data-theme='light'] .bd-links .nav-link.active {
+  color: var(--uics-accent);
+  background: var(--uics-accent-soft);
+  font-weight: 600;
+}
+.bd-sidebar-secondary { font-size: 0.88rem; }
+.bd-sidebar-secondary .onthispage { font-weight: 600; }
+html[data-theme='light'] .bd-sidebar-secondary .nav-link { color: var(--uics-muted); }
+html[data-theme='light'] .bd-sidebar-secondary .nav-link.active {
+  color: var(--uics-accent);
+  font-weight: 600;
 }
 
+/* Don't force overflow:hidden on the primary sidebar: long navigation
+   should remain scrollable on smaller screens. */
 
-/* ---------- Block quotes / epigraph ---------- */
-
-blockquote,
-.epigraph {
+/* ---------- Quotes ---------- */
+html[data-theme='light'] .bd-article blockquote,
+html[data-theme='light'] .bd-article .epigraph {
   border-left: 3px solid var(--uics-accent);
   background: transparent;
-  margin: 2.5rem 0;
-  padding: 0.25rem 0 0.25rem 1.5rem;
-  color: #4e5559;
+  color: #536575;
 }
-
-.epigraph {
-  font-size: 1.08rem;
-  font-style: italic;
+.bd-article blockquote,
+.bd-article .epigraph {
+  margin: 2.3rem 0;
+  padding: 0.25rem 0 0.25rem 1.3rem;
 }
+.epigraph { font-size: 1.04rem; font-style: italic; }
+html[data-theme='light'] .epigraph .attribution { color: var(--uics-muted); }
+.epigraph .attribution { font-size: 0.9rem; }
 
-.epigraph .attribution {
-  color: var(--uics-muted);
-  font-size: 0.92rem;
-}
-
-
-/* ---------- Person cards ---------- */
-
-.sd-card {
-  background: var(--uics-surface);
-  border: 1px solid var(--uics-border) !important;
-  border-radius: var(--uics-radius);
-  box-shadow: none !important;
-
-  max-width: none;
+/* ---------- Member cards (Sphinx Design) ----------
+   Intentionally flat: no borders, shadows, or hover movement.
+   These rules apply to all Sphinx Design cards on the site; if you add
+   other types of card later, scope them with a custom wrapper class. */
+.bd-article .sd-card,
+.bd-article .sd-card.sd-shadow-sm,
+.bd-article .sd-card.sd-shadow-md,
+.bd-article .sd-card.sd-shadow-lg {
   width: 100%;
-
-  margin: 1.4rem 0;
-  overflow: hidden;
-
-  transition:
-    border-color 150ms ease,
-    transform 150ms ease;
-}
-
-.sd-card:hover {
-  border-color: #ccc8c1 !important;
-  transform: translateY(-1px);
+  max-width: none;
+  margin: 0.8rem 0 1.5rem;
+  border: 0 !important;
+  border-radius: var(--uics-radius);
+  background: transparent;
   box-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+  overflow: visible;
 }
-
+.bd-article .sd-card:hover {
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
 .sd-card-header {
-  text-align: left;
-  color: var(--uics-text);
-  font-size: 1.25rem;
-  font-weight: 650;
-
+  padding: 1rem 0 0.25rem;
   border-bottom: 0;
   background: transparent;
-
-  padding: 1.4rem 1.5rem 0.2rem;
-}
-
-.sd-card-body {
-  color: var(--uics-text);
   text-align: left;
-  font-size: 0.96rem;
-  line-height: 1.65;
-
-  padding: 0.6rem 1.5rem 1rem;
+  font-family: var(--uics-font-heading);
+  font-size: 1.14rem;
+  font-weight: 600;
 }
-
+html[data-theme='light'] .sd-card-header { color: var(--uics-text); }
+.sd-card-body {
+  padding: 0.5rem 0 0.7rem;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
 .sd-card-body figure.mugshot {
   float: right;
-  margin: 0 0 1rem 1.7rem;
+  margin: 0 0 1rem 1.5rem;
 }
-
 .sd-card-body figure.mugshot img {
-  width: 128px;
-  height: 128px;
+  display: block;
+  width: 132px;
+  height: 132px;
   object-fit: cover;
-
-  border: none;
-  border-radius: 5%;
+  border: 0;
+  border-radius: 8px;
 }
-
 .sd-card-footer {
   width: 100%;
+  padding: 0.5rem 0 0.9rem;
   text-align: left !important;
-
-  background: #fbfaf8;
-  border-top: 1px solid var(--uics-border);
-
-  padding: 0.8rem 1.5rem;
+  border-top: 0 !important;
+  background: transparent !important;
 }
-
 .sd-card-footer ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem 1.2rem;
-
+  gap: 0.35rem 1.1rem;
   list-style: none;
+  margin: 0;
   padding: 0;
-  margin: 0;
 }
-
-.sd-card-footer li {
-  margin: 0;
-}
-
-.sd-card-footer a {
-  color: var(--uics-accent);
-  font-size: 0.9rem;
-  font-weight: 550;
-}
-
-/* Remove all Sphinx Design card shadows */
-.sd-card,
-.sd-card:hover,
-.sd-shadow-sm,
-.sd-shadow-md,
-.sd-shadow-lg {
-  box-shadow: none !important;
-}
-
+.sd-card-footer li { margin: 0; }
+.sd-card-footer a { font-size: 0.88rem; font-weight: 600; }
 
 /* ---------- Publications ---------- */
-
 .pub {
   list-style: none;
   margin: 0;
-  padding: 1.15rem 0 1.2rem;
+  padding: 1.05rem 0 1.2rem;
   border-bottom: 1px solid var(--uics-border);
 }
-
-.pub::marker {
-  content: "";
-}
-
-.pub a {
-  color: var(--uics-text);
-  text-decoration: none;
-}
-
+.pub::marker { content: ''; }
+.bd-article ul:has(.pub) { padding-left: 0; }
+.pub a { text-decoration: none !important; }
 .pub a strong {
   font-size: 1.02rem;
-  line-height: 1.4;
-  font-weight: 620;
+  line-height: 1.48;
+  font-weight: 700;
 }
-
-.pub a:hover {
-  color: var(--uics-accent);
-}
-
 .pub em {
   display: inline-block;
   margin-top: 0.35rem;
-
-  color: #545b60;
-  font-size: 0.91rem;
+  font-size: 0.9rem;
   font-style: normal;
 }
-
 .pub small {
   display: inline-block;
   margin-top: 0.15rem;
-
-  color: #777d81;
-  font-size: 0.85rem;
+  font-size: 0.83rem;
 }
+html[data-theme='light'] .pub em { color: #526373; }
+html[data-theme='light'] .pub small { color: var(--uics-muted); }
 
-.bd-article ul:has(.pub) {
-  padding-left: 0;
+/* ---------- Code cells ---------- */
+.bd-article pre { border-radius: 7px; box-shadow: none; }
+.bd-article code { font-size: 0.91em; }
+html[data-theme='light'] .bd-article div.highlight,
+html[data-theme='light'] .bd-article .cell_input {
+  background: #f3f6f8;
+  border-color: var(--uics-border);
+  border-radius: 7px;
 }
-
-
-/* ---------- Code ---------- */
-
-pre {
-  border: 1px solid var(--uics-border);
-  border-radius: 8px;
-  box-shadow: none;
+html[data-theme='light'] .bd-article div.highlight pre {
+  background: transparent;
 }
+.bd-article div.highlight pre { line-height: 1.55; }
 
-code {
-  font-size: 0.9em;
-}
-
-
-/* ---------- Footer ---------- */
-
-footer.bd-footer-content {
-  color: var(--uics-muted);
-  border-top: 1px solid var(--uics-border);
-  margin-top: 4rem;
-  padding-top: 1.5rem;
-}
-
-
-/* ---------- Landing page ---------- */
-
-.uics-hero {
-  padding: 3.5rem 0 2.6rem;
-}
-
+/* ---------- Homepage (existing .uics-* markup) ---------- */
+.uics-hero { padding: 3rem 0 2.3rem; }
 .uics-kicker {
-  color: var(--uics-accent);
-  font-size: 0.79rem;
+  font-size: 0.76rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
-
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.85rem;
 }
-
-.uics-hero h1 {
-  max-width: 760px;
-  margin-bottom: 1.25rem;
-}
-
+html[data-theme='light'] .uics-kicker { color: var(--uics-accent); }
+.uics-hero h1 { max-width: 760px; margin-bottom: 1.2rem; }
 .uics-lead {
   max-width: 700px;
-
-  color: #4d5559;
-  font-size: clamp(1.12rem, 2vw, 1.3rem);
-  line-height: 1.62;
+  font-size: clamp(1.08rem, 1.7vw, 1.24rem);
+  line-height: 1.65;
 }
-
+html[data-theme='light'] .uics-lead { color: #4d6070; }
 .uics-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
   margin-top: 1.8rem;
 }
-
-.uics-button {
+.bd-article a.uics-button {
   display: inline-block;
   padding: 0.65rem 1rem;
-
   border: 1px solid var(--uics-border);
-  border-radius: 7px;
-
-  color: var(--uics-text) !important;
-  background: var(--uics-surface);
-
+  border-radius: 6px;
   font-weight: 600;
   text-decoration: none !important;
+  transition: background-color 150ms ease, border-color 150ms ease;
 }
-
-.uics-button:hover {
-  border-color: var(--uics-accent);
-  color: var(--uics-accent) !important;
+html[data-theme='light'] .bd-article a.uics-button {
+  color: var(--uics-text);
+  background: var(--uics-surface);
 }
-
-.uics-button-primary {
-  color: white !important;
+html[data-theme='light'] .bd-article a.uics-button:hover {
+  color: var(--uics-accent);
   border-color: var(--uics-accent);
+}
+html[data-theme='light'] .bd-article a.uics-button-primary {
+  color: #fff !important;
   background: var(--uics-accent);
+  border-color: var(--uics-accent);
 }
-
-.uics-button-primary:hover {
-  color: white !important;
+html[data-theme='light'] .bd-article a.uics-button-primary:hover {
+  color: #fff !important;
   background: var(--uics-accent-hover);
   border-color: var(--uics-accent-hover);
 }
-
 .uics-topics {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  margin: 2rem 0 2.5rem;
+  gap: 1rem 1.3rem;
+  margin: 1.9rem 0 2.4rem;
 }
-
 .uics-topic {
-  padding: 1.25rem 1.35rem;
-  border: 1px solid var(--uics-border);
-  border-radius: var(--uics-radius);
-  background: var(--uics-surface);
+  padding: 0.95rem 0 1rem;
+  border: 0;
+  border-top: 2px solid var(--uics-border);
+  border-radius: 0;
+  background: transparent;
 }
+html[data-theme='light'] .uics-topic { border-top-color: var(--uics-border); }
+.uics-topic strong { display: block; margin-bottom: 0.35rem; }
+.uics-topic span { font-size: 0.92rem; }
+html[data-theme='light'] .uics-topic span { color: var(--uics-muted); }
 
-.uics-topic strong {
-  display: block;
-  margin-bottom: 0.3rem;
-}
-
-.uics-topic span {
+/* ---------- Footer, accessibility ---------- */
+footer.bd-footer-content { margin-top: 3.5rem; padding-top: 1.4rem; }
+html[data-theme='light'] footer.bd-footer-content {
   color: var(--uics-muted);
-  font-size: 0.92rem;
+  border-top: 1px solid var(--uics-border);
 }
-
-
-/* ---------- Focus ---------- */
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-  outline: 3px solid rgba(139, 47, 42, 0.35);
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 3px solid var(--uics-accent);
   outline-offset: 3px;
 }
 
-
-/* ---------- Mobile ---------- */
-
-@media (max-width: 768px) {
-
-  .bd-article {
-    padding-top: 1rem;
-  }
-
-  h1 {
-    font-size: 2.1rem;
-  }
-
-  .uics-hero {
-    padding-top: 2rem;
-  }
-
-  .uics-topics {
-    grid-template-columns: 1fr;
-  }
-
-  .sd-card-body figure.mugshot {
-    float: none;
-    margin: 0 auto 1.3rem;
-  }
-
-  .sd-card-body figure.mugshot img {
-    width: 115px;
-    height: 115px;
-  }
+/* ---------- Dark mode: allow PyData to choose its own dark surfaces ---------- */
+html[data-theme='dark'] .bd-article .sd-card,
+html[data-theme='dark'] .sd-card-header,
+html[data-theme='dark'] .sd-card-footer,
+html[data-theme='dark'] .uics-topic {
+  background: transparent;
+}
+html[data-theme='dark'] .uics-topic,
+html[data-theme='dark'] .pub {
+  border-color: var(--pst-color-border);
+}
+html[data-theme='dark'] .bd-article a.uics-button {
+  border-color: var(--pst-color-border);
+  color: var(--pst-color-text-base);
+}
+html[data-theme='dark'] .bd-article a.uics-button-primary {
+  background: var(--pst-color-primary);
+  border-color: var(--pst-color-primary);
+  color: var(--pst-color-on-primary, #fff);
 }
 
-
-/* ---------- Reduced motion ---------- */
+/* ---------- Narrow screens ---------- */
+@media (max-width: 768px) {
+  .bd-article { padding-top: 1rem; }
+  h1 { font-size: 1.9rem; }
+  h2 { font-size: 1.35rem; }
+  .uics-hero { padding-top: 1.7rem; }
+  .uics-topics { grid-template-columns: 1fr; gap: 0.4rem; }
+  .sd-card-body figure.mugshot { float: none; margin: 0 0 1rem; }
+  .sd-card-body figure.mugshot img { width: 120px; height: 120px; }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     scroll-behavior: auto !important;
     transition: none !important;
   }
-}
-
-
-/* ---------- Force flat Sphinx Design cards ---------- */
-
-.bd-article .sd-card,
-.bd-article .sd-card.sd-shadow-sm,
-.bd-article .sd-card.sd-shadow-md,
-.bd-article .sd-card.sd-shadow-lg {
-    box-shadow: none !important;
-    filter: none !important;
-}
-
-.bd-article .sd-card {
-    border: 1px solid var(--uics-border) !important;
-}
-
-
-/* Remove borders around lab member cards */
-#lab-members .sd-card {
-    border: none !important;
-}
-#lab-members .sd-card-footer {
-    border-top: none !important;
 }
